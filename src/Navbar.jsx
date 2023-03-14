@@ -6,7 +6,7 @@ export default function Navbar({val , setVal , whatsNumber , massengerURL , phon
 
 
   return (
-        <nav className="navbar fixed-top bg-white shadow py-0" dir={val === 'ar' || val ===  'ur'? 'rtl' : 'ltr'}>
+        <nav className="navbar fixed-top bg-white shadow py-0" dir={val === '1' || val ===  '5'? 'rtl' : 'ltr'}>
             <div className=" container-lg container-fluid d-flex justify-content-between align-items-center">
                 <span className="navbar-brand me-0 ms-0"><img src={logo} style={{height: '65px'}} alt="logo" /></span>
                 <div className="d-flex justify-content-between align-items-center special-div">

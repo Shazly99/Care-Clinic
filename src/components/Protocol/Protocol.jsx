@@ -12,7 +12,7 @@ import teeth2 from '../../img/img/gif/2.png';
 import teeth3 from '../../img/img/gif/3.png';
 import teeth4 from '../../img/img/gif/4.png';
 
-const Protocol = ({ val, whatsNumber, sec4 }) => {
+const Protocol = ({ val, whatsNumber, sec4 ,slider}) => {
   const [play, setPlay] = useState(0);
 
   const handePlay = (p) => {
@@ -73,7 +73,7 @@ const Protocol = ({ val, whatsNumber, sec4 }) => {
       <div className="app__protocol" >
         <Container>
           <Row className='app__protocol-grid gx-lg-5 gx-0 gy-lg-0 gy-5 special-reverse'>
-            <Col lg={6} className='app__protocol-left' dir={val === 'ar' || val === 'ur' ? 'rtl' : 'ltr'} >
+            <Col lg={6} className='app__protocol-left' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'} >
               <h2 className='special-reverce-heading-lg mb-3'>{sec4?.Title}</h2>
               <p style={{ fontSize: '14px' }}>{sec4?.body}</p>
               <div className="center">
@@ -82,7 +82,7 @@ const Protocol = ({ val, whatsNumber, sec4 }) => {
                   <div className="dt">
                     <div className="dtc">
                       <p>WhatsApp
-                        <label>{val === 'ar' ? 'احصل على معلومات فورية' : val === 'us' ? 'Get Immediate Info' : val === 'fr' ? 'Obtenez des informations immédiates' : val === 'ru' ? 'Получить немедленную информацию' : val === 'ur' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
+                        <label>{val === '1' ? 'احصل على معلومات فورية' : val === '2' ? 'Get Immediate Info' : val === '3' ? 'Obtenez des informations immédiates' : val === '4' ? 'Получить немедленную информацию' : val === '5' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
 
                       </p>
                     </div>
@@ -95,12 +95,12 @@ const Protocol = ({ val, whatsNumber, sec4 }) => {
               </div>
             </Col>
             <Col lg={6} className='app__protocol-right mx-auto'>
-              <h2 className='special-reverce-heading-sm h1 mb-4' dir={val === 'ar' || val === 'ur' ? 'rtl' : 'ltr'}>Pandemic Distancing Protocol</h2>
+              <h2 className='special-reverce-heading-sm h1 mb-4' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>Pandemic Distancing Protocol</h2>
 
               <div className="img-tab">
                 <Slider {...slider1} className='text-center' dir='ltr'>
-                  {cases.map((item, i) => (
-                    <img key={i} src={item.img} alt={item.alt} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                  {slider?.map((item, i) => (
+                    <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
                   ))}
                 </Slider>
               </div>

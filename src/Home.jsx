@@ -81,7 +81,7 @@ export default function Home({ sec1, val, sec2, staff, whatsNumber }) {
   };
   return (
     <>
-      <header className='py-5' style={{ backgroundImage: `url(${img111}` }} dir={val === 'ar' || val === 'ur' ? 'rtl' : 'ltr'}>
+      <header className='py-5' style={{ backgroundImage: `url(${img111}` }} dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
         <div className="container h-100">
           <div className="row gy-4 column__sm-reverse gx-md-5 gx-0 d-flex justify-content-center align-items-center mt-5 pt-5">
             <div className="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-8">
@@ -122,7 +122,7 @@ export default function Home({ sec1, val, sec2, staff, whatsNumber }) {
                     <div className="dt d-flex justify-content-center align-item-center flex-row">
                       <div className="dtc">
                         <p>WhatsApp
-                        <label>{val === 'ar' ? 'احصل على معلومات فورية' : val === 'us' ? 'Get Immediate Info' : val === 'fr' ? 'Obtenez des informations immédiates' : val === 'ru' ? 'Получить немедленную информацию' : val === 'ur' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
+                        <label>{val === '1' ? 'احصل على معلومات فورية' : val === '2' ? 'Get Immediate Info' : val === '3' ? 'Obtenez des informations immédiates' : val === '4' ? 'Получить немедленную информацию' : val === '5' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
                         </p>
                       </div>
                       <div className="dtc">
@@ -140,7 +140,7 @@ export default function Home({ sec1, val, sec2, staff, whatsNumber }) {
       </header>
 
 
-      <section id='rashed' className='py-5 rashed-mainBg second-sec' dir={val === 'ar' || val === 'ur' ? 'rtl' : 'ltr'}>
+      <section id='rashed' className='py-5 rashed-mainBg second-sec' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
         <div className="container">
           {Object.keys(sec2).length > 2 ?
             <div className="special-sec py-2 px-3 rounded-3 bg-white">
@@ -400,7 +400,7 @@ export default function Home({ sec1, val, sec2, staff, whatsNumber }) {
                 <div className="dt">
                   <div className="dtc">
                     <p>WhatsApp
-                      <label>{val === 'ar' ? 'احصل على معلومات فورية' : val === 'us' ? 'Get Immediate Info' : val === 'fr' ? 'Obtenez des informations immédiates' : val === 'ru' ? 'Получить немедленную информацию' : val === 'ur' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
+                      <label>{val === '1' ? 'احصل على معلومات فورية' : val === '2' ? 'Get Immediate Info' : val === '3' ? 'Obtenez des informations immédiates' : val === '4' ? 'Получить немедленную информацию' : val === '5' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
                     </p>
                   </div>
                   <div className="dtc">

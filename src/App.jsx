@@ -65,12 +65,14 @@ function App() {
             <Protocol val={val}
               whatsNumber={globalData?.contactus?.whatsapp}
               sec4={globalData?.section4}
+              slider={globalData?.sliders}
             />
             <ChangeSmile
               val={val}
               sec5={globalData?.section5}
               whatsNumber={globalData?.contactus?.whatsapp}
               sec6={globalData?.section6}
+              brand={globalData?.brands}
             />
           </div>
         </div>
