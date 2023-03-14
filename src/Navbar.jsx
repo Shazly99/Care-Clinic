@@ -34,11 +34,11 @@ export default function Navbar({val , setVal , whatsNumber , massengerURL , phon
                       </li>
                   </ul>
                   <select value={val} onChange={(e) => {setVal(e.target.value)}} dir='ltr' className='form-select bg-select color-select fs-5' style={{width: '100px'}}>
-                    <option value="ar">Arabic</option>
-                    <option value="en">English</option>
-                    <option value="fr">French</option>
-                    <option value="ru">Russian</option>
-                    <option value="ur">Turkish</option>
+                    <option value="1">Arabic</option>
+                    <option value="2">English</option>
+                    <option value="3">French</option>
+                    <option value="4">Russian</option>
+                    <option value="5">Turkish</option>
                   </select>
                 </div>
                 

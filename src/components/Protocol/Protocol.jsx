@@ -30,10 +30,7 @@ const Protocol = ({ val, whatsNumber, sec4 }) => {
   };
   useEffect(() => {
 
-  }, [play])
-
-
-
+  }, [play]) 
   const slider1 = {
     dots: false,
     arrows: true,
@@ -77,8 +74,8 @@ const Protocol = ({ val, whatsNumber, sec4 }) => {
         <Container>
           <Row className='app__protocol-grid gx-lg-5 gx-0 gy-lg-0 gy-5 special-reverse'>
             <Col lg={6} className='app__protocol-left' dir={val === 'ar' || val === 'ur' ? 'rtl' : 'ltr'} >
-              <h2 className='special-reverce-heading-lg mb-3'>Pandemic Distancing Protocol</h2>
-              <p style={{ fontSize: '14px' }}>To prevent any emergence of any potential transmission of any virus, we are using advanced equipment to sterilize every corner of our clinic; anticipated consumable resources needs (e.g. masks; gloves; hand hygiene products ;..) have been estimated. Your well-being matters to us, we expect the same consideration from you.</p>
+              <h2 className='special-reverce-heading-lg mb-3'>{sec4?.Title}</h2>
+              <p style={{ fontSize: '14px' }}>{sec4?.body}</p>
               <div className="center">
                 <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target="blank">
                   <span></span><span></span><span></span><span></span>

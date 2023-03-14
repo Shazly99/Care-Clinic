@@ -9,23 +9,20 @@ import ChangeSmile from "./components/ChangeSmile/ChangeSmile";
 import axios from "axios";
 
 function App() {
-  const [val, setVal] = useState("ar");
+  const [val, setVal] = useState("1");
   const [globalData, setGlobalData] = useState([]);
   const [loading, setLoading] = useState(false);
+
 
   const getData = async () => {
     setLoading(false);
     await axios
       .post(`https://cureclinckapi.amlakturks.com/public/api/GetHomepage`, {
-        Lang:
-          (val === "ar" && "1") ||
-          (val === "ur" && "5") ||
-          (val === "us" && "2") ||
-          (val === "fr" && "3") ||
-          (val === "ru" && "4"),
+        Lang: val 
       })
       .then((res) => {
         setGlobalData(res.data.data);
+        console.log();
         setLoading(true);
       })
       .catch((err) => {
@@ -34,7 +31,10 @@ function App() {
   };
 
   useEffect(() => {
-    getData();
+
+
+ 
+      getData(); 
   }, [val]);
 
   return (
