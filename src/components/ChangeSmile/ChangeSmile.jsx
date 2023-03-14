@@ -51,63 +51,7 @@ const ChangeSmile = ({val , sec5 , sec6 , whatsNumber}) => {
         }
       },
     ]
-  };
-
-  // const Smiles =
-  //   [
-  //     {
-  //       id: 1,
-  //       img: img1,
-  //       title: 'Clear Aligner & Invisalign',
-  //       text: `Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
-  //       straighten the teeth over time without the hassle, pain, and no look of metal
-  //       braces, it is the new innovation of orthodontics.`
-  //     },
-  //     {
-  //       id: 2,
-  //       img: img2,
-  //       title: `Hollywood Smile`,
-  //       text: `Hollywood smile combines cosmetic and/or restorative dentistry treatments to make
-  //       you
-  //       SMILE LIKE A SUPER STAR. Esthetic Dental Veneers can help to cover imperfections
-  //       in
-  //       your smile through a personalized treatment plan to fit your needs and desires.`
-  //     },
-  //     {
-  //       id: 3,
-  //       img: img3,
-  //       title: `Dental Implants`,
-  //       text: `Dental implants can be surgically placed into the jawbone to replace one or more
-  //       missing teeth with a natural-looking, comfortable restoration. It is the ideal
-  //       solution to replace your missed teeth.`
-  //     },
-  //     // {
-  //     //   id: 4,
-  //     //   img: img1,
-  //     //   title: `Clear Aligner & Invisalign`,
-  //     //   text: `Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
-  //     //   straighten the teeth over time without the hassle, pain, and no look of metal
-  //     //   braces, it is the new innovation of orthodontics.`
-  //     // },
-  //     // {
-  //     //   id: 5,
-  //     //   img: img2,
-  //     //   title: `Clear Aligner & Invisalign`,
-  //     //   text: `Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
-  //     //   straighten the teeth over time without the hassle, pain, and no look of metal
-  //     //   braces, it is the new innovation of orthodontics.`
-  //     // },
-  //     // {
-  //     //   id: 6,
-  //     //   img: img3,
-  //     //   title: `Clear Aligner & Invisalign`,
-  //     //   text: `Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
-  //     //   straighten the teeth over time without the hassle, pain, and no look of metal
-  //     //   braces, it is the new innovation of orthodontics.`
-  //     // },
-
-  //   ]
-
+  }; 
 
     const slider3 = {
       dots: true,
@@ -145,35 +89,7 @@ const ChangeSmile = ({val , sec5 , sec6 , whatsNumber}) => {
         // },
       ]
     };
-
-    // const numss =
-    // [
-    //   {
-    //     id: 1,
-    //     number: '17',
-    //     title: 'Dental Clinics',
-    //     icon: icons1,
-    //   },
-    //   {
-    //     id: 2,
-    //     number: '50',
-    //     title: 'Doctors Staff',
-    //     icon: icons2,
-    //   },
-    //   {
-    //     id: 3,
-    //     number: '20',
-    //     title: 'Years of Experience',
-    //     icon: icons3,
-    //   },
-    //   {
-    //     id: 4,
-    //     number: '96',
-    //     title: 'Satisfaction Rate',
-    //     icon: icons4,
-    //   },
-    // ]
-
+ 
 
   return (
 
@@ -395,8 +311,7 @@ const ChangeSmile = ({val , sec5 , sec6 , whatsNumber}) => {
                   love to help you.
                 </p>
               </div>
-            </Col>
-            {/* col-xl-3 col-lg-4 col-md-5 col-sm-6 col-8 */}
+            </Col> 
             <Col xl={3} lg={4} md={5} sm={9} className='col-11'>
               <h4 className=' mb-3 rashed-secondColor'>Send Message</h4>
               <form className='mt-32 bg-white text-center py-4 px-3 rounded-3' dir='ltr'>
@@ -420,15 +335,14 @@ const ChangeSmile = ({val , sec5 , sec6 , whatsNumber}) => {
                 <textarea placeholder='Message' className='mx-auto form-control rashed-bgInput my-3' name='message' id='message'></textarea>
                 <button type='submit' className='btn send__footer '>Send Message</button>
               </form>
-            </Col>
-
+            </Col> 
           </Row>
         </Container>
       </div>
       <div className="copy">
         <div className="container">
             <p className="copyp roboto">
-                2019 - <span>DentSpa  </span> © All Rights Reserved.
+                2023 - <span> Care Clinic  </span> © All Rights Reserved.
             </p>
         </div>
     </div>
