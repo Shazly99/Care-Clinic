@@ -1,48 +1,48 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Slider from "react-slick";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import img111 from './img/img/slider.png';
 import img1 from './img/img/img1.png';
-import img2 from './img/img/img2.png';
-import img3 from './img/img/img3.png';
-import patient from './img/patient.jpg';
+// import img2 from './img/img/img2.png';
+// import img3 from './img/img/img3.png';
+// import patient from './img/patient.jpg';
 import teeth1 from './img/img/gif/1.png';
 import teeth2 from './img/img/gif/2.png';
 import teeth3 from './img/img/gif/3.png';
 import teeth4 from './img/img/gif/4.png';
-import video from './img/video.jpg';
-import doctor1 from './img/doctor1.jpg';
-import doctor2 from './img/doctor2.jpg';
-import doctor3 from './img/doctor3.jpg';
-import doctor4 from './img/doctor4.jpg';
-import doctor5 from './img/doctor5.jpg';
+// import video from './img/video.jpg';
+// import doctor1 from './img/doctor1.jpg';
+// import doctor2 from './img/doctor2.jpg';
+// import doctor3 from './img/doctor3.jpg';
+// import doctor4 from './img/doctor4.jpg';
+// import doctor5 from './img/doctor5.jpg';
 import Member from './Member';
 // import $ from 'jquery';
 // import { BsWhatsapp } from 'react-icons/bs';
 // import img from './img/pendemic-video.png'
 
-import { BsPlayFill } from "react-icons/bs";
+// import { BsPlayFill } from "react-icons/bs";
 
-export default function Home({ val }) {
+export default function Home({ val , sec2 , staff , whatsNumber}) {
 
-  const [play, setPlay] = useState(0);
-  // const [modal, setmodal] = useState(false);
+  // const [play, setPlay] = useState(0);
 
-  const handePlay = (p) => {
-    setPlay(p);
-    // setmodal(false)
-  };
+  // const handePlay = (p) => {
+  //   setPlay(p);
+  // };
 
-  const handleClose = () => {
-    setPlay(0);
-  };
+  // const handleClose = () => {
+  //   setPlay(0);
+  // };
 
-  const handleKeyDown = (event) => {
-    if (event.key === 'Escape') {
-      setPlay(0);
-    }
-  };
+  // const handleKeyDown = (event) => {
+  //   if (event.key === 'Escape') {
+  //     setPlay(0);
+  //   }
+  // };
+
+
 
   const slider1 = {
     dots: false,
@@ -162,61 +162,61 @@ export default function Home({ val }) {
         },
       ]
     };
-    const doctors =
-      [
-        {
-          id: 1,
-          img: doctor1,
-          title: 'Dr. Betül Akyıldız',
-          text: 'Orthodontics'
-        },
-        {
-          id: 2,
-          img: doctor2,
-          title: 'Dr. Tuğçe Akın',
-          text: 'Prosthodontics'
-        },
-        {
-          id: 3,
-          img: doctor3,
-          title: 'Dr. Şükran Tüfekçioğlu',
-          text: 'Oral-Maxillofacial Surgery and Implantology'
-        },
-        {
-          id: 4,
-          img: doctor4,
-          title: 'Dr. Serdar Yilmaz',
-          text: 'Oral and Maxillofacial Surgeon'
-        },
-        {
-          id: 5,
-          img: doctor5,
-          title: 'Dr. Ezgihan Arslan',
-          text: 'Pedodontology'
-        },
-      ]
+    // const doctors =
+    //   [
+    //     {
+    //       id: 1,
+    //       img: doctor1,
+    //       title: 'Dr. Betül Akyıldız',
+    //       text: 'Orthodontics'
+    //     },
+    //     {
+    //       id: 2,
+    //       img: doctor2,
+    //       title: 'Dr. Tuğçe Akın',
+    //       text: 'Prosthodontics'
+    //     },
+    //     {
+    //       id: 3,
+    //       img: doctor3,
+    //       title: 'Dr. Şükran Tüfekçioğlu',
+    //       text: 'Oral-Maxillofacial Surgery and Implantology'
+    //     },
+    //     {
+    //       id: 4,
+    //       img: doctor4,
+    //       title: 'Dr. Serdar Yilmaz',
+    //       text: 'Oral and Maxillofacial Surgeon'
+    //     },
+    //     {
+    //       id: 5,
+    //       img: doctor5,
+    //       title: 'Dr. Ezgihan Arslan',
+    //       text: 'Pedodontology'
+    //     },
+    //   ]
 
-      const feature =
-      [
-        {
-          id: 1,
-          img: img1,
-          title: 'SAME DAY DENTISTRY',
-          text: 'Procedures such as a root canal & crown, extraction & implant, and bone graft/sinus lift normally take 3-5 visits. We can do it in one!'
-        },
-        {
-          id: 2,
-          img: img2,
-          title: 'SAME DAY DENTISTRY',
-          text: 'Procedures such as a root canal & crown, extraction & implant, and bone graft/sinus lift normally take 3-5 visits. We can do it in one!'
-        },
-        {
-          id: 3,
-          img: img3,
-          title: 'SAME DAY DENTISTRY',
-          text: 'Procedures such as a root canal & crown, extraction & implant, and bone graft/sinus lift normally take 3-5 visits. We can do it in one!'
-        },
-      ]
+      // const feature =
+      // [
+      //   {
+      //     id: 1,
+      //     img: img1,
+      //     title: 'SAME DAY DENTISTRY',
+      //     text: 'Procedures such as a root canal & crown, extraction & implant, and bone graft/sinus lift normally take 3-5 visits. We can do it in one!'
+      //   },
+      //   {
+      //     id: 2,
+      //     img: img2,
+      //     title: 'SPECIALIST CONSULTATION',
+      //     text: 'We take pride in explaining to our patients the status of their dental health. We guide you in developing an effective treatment plan.'
+      //   },
+      //   {
+      //     id: 3,
+      //     img: img3,
+      //     title: 'ONLINE APPOINTMENT',
+      //     text: 'Fill out the form, tell us your convenient time for an appointment and we will call you for confirmation.'
+      //   },
+      // ]
 
 
 
@@ -285,42 +285,33 @@ export default function Home({ val }) {
 
       <section id='rashed' className='py-5 rashed-mainBg second-sec' dir={val === 'ar' || val ===  'ur' ? 'rtl' : 'ltr'}>
         <div className="container">
-          {Object.keys(feature).length > 2 ?
+          {Object.keys(sec2).length > 2 ?
             <div className="special-sec py-2 px-3 rounded-3 bg-white">
               <Slider {...slider2}>
-                {feature.map((item, i) => (
+                {sec2.map((item, i) => (
                   <div key={i} className="feature">
-                    <img src={item.img} className='w-75' style={{ height: '180px' }} alt="doctor" />
-                    <h6 className='mb-2'>{item.title}</h6>
-                    <p className='text-muted' style={{ fontSize: '14px', width: '75%' }}>{item.text}</p>
+                    <img src={item.FilePath !== null && item.FilePath !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section2/${item?.FilePath}` : img1} className='w-75' style={{ height: '180px' }} alt="doctor" />
+                    <h6 className='mb-2'>{item.Title !== null && item.Title !== undefined ? item.Title : 'Title'}</h6>
+                    <p className='text-muted' style={{ fontSize: '14px', width: '75%' }}>{item.Body !== null && item.Body !== undefined ? item.Body : 'Body'}</p>
                   </div>
                 ))}
               </Slider>
             </div>
             :
-            <div className="row gx-0 d-flex justify-content-center align-items-center bg-white rounded-3 shadow px-3 py-2 special-sec">
-              <div className="col-md-4 col-11">
-                <div className="feature">
-                  <img src={img1} className='w-75' style={{ height: '180px' }} alt="doctor" />
-                  <h6 className='mb-2'>SAME DAY DENTISTRY</h6>
-                  <p className='text-muted' style={{ fontSize: '14px', width: '75%' }}>Procedures such as a root canal & crown, extraction & implant, and bone graft/sinus lift normally take 3-5 visits. We can do it in one!</p>
-                </div>
+            Object.keys(sec2).length > 0 ?
+              <div className="row gx-0 d-flex justify-content-center align-items-center bg-white rounded-3 shadow px-3 py-2 special-sec">
+                {sec2.map((el , i) => (
+                    <div key={i} className="col-md-4 col-11">
+                      <div className="feature">
+                        <img src={el.FilePath !== null && el.FilePath !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section2/${el?.FilePath}` : img1} className='w-75' style={{ height: '180px' }} alt="doctor" />
+                        <h6 className='mb-2'>{el.Title !== null && el.Title !== undefined ? el.Title : 'Title'}</h6>
+                        <p className='text-muted' style={{ fontSize: '14px', width: '75%' }}>{el.Body !== null && el.Body !== undefined ? el.Body : 'Body'}</p>
+                      </div>
+                    </div>
+                ))}
               </div>
-              <div className="col-md-4 col-11">
-                <div className="feature">
-                  <img src={img2} className='w-75' style={{ height: '180px' }} alt="doctor" />
-                  <h6 className='mb-2'>SPECIALIST CONSULTATION</h6>
-                  <p className='text-muted' style={{ fontSize: '14px', width: '75%' }}>We take pride in explaining to our patients the status of their dental health. We guide you in developing an effective treatment plan.</p>
-                </div>
-              </div>
-              <div className="col-md-4 col-11">
-                <div className="feature">
-                  <img src={img3} className='w-75' style={{ height: '180px' }} alt="doctor" />
-                  <h6 className='mb-2'>ONLINE APPOINTMENT</h6>
-                  <p className='text-muted' style={{ fontSize: '14px', width: '75%' }}>Fill out the form, tell us your convenient time for an appointment and we will call you for confirmation</p>
-                </div>
-              </div>
-            </div>
+              :
+              null
           }
 
           <ul className="nav nav-pills justify-content-center mb-5" id="pills-tab" role="tablist">
@@ -343,7 +334,7 @@ export default function Home({ val }) {
                   <div className="caption-tab text-white">
                     <h2 className='fw-bold mb-2'>Before & After Photos</h2>
                     <p className='mb-2'>Some images for successful cases for our patients.</p>
-                    <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target="blank">
+                    <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                             <span></span><span></span><span></span><span></span>
                             <div className="dt">
                                 <div className="dtc">
@@ -379,7 +370,7 @@ export default function Home({ val }) {
                     <h2 className='fw-bold mb-2'>Innovation, Care, Experience</h2>
                     <p className='mb-2'>Our clinic is located in one of the most populous and well-known locations in Istanbul in Şişli - Fulya. Highly-educated Turkish qualified doctors and friendly team</p>
                     <p className='mb-2'>Dentists and staff speak more than 3 different languages Our priority is giving high-quality and efficient dental care.</p>
-                    <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target="blank">
+                    <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                             <span></span><span></span><span></span><span></span>
                             <div className="dt">
                                 <div className="dtc">
@@ -450,7 +441,7 @@ export default function Home({ val }) {
                   <div className="caption-tab text-white">
                     <h2 className='fw-bold mb-2'>Our Happy Patients</h2>
                     <p className='mb-2'>One of our happy patients is explaining her good experience at DentSpa® , enjoy watching and be the next one :)</p>
-                    <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target="blank">
+                    <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                             <span></span><span></span><span></span><span></span>
                             <div className="dt">
                                 <div className="dtc">
@@ -522,48 +513,48 @@ export default function Home({ val }) {
       <section id='rashed2' className='py-5'>
         <div className="container">
           <div className="main-title-section text-center mb-3">
-            <h2 className='rashed-secondColor mb-4 h1'>Your Smile Creators</h2>
-            <p className='mb-0 text-muted'>Meet Our Expert Doctors</p>
+            <h2 className='rashed-secondColor mb-4 h1'>{val === 'ar' ? 'صانعـي ابتسامتـك' : val === 'us' ? 'Your Smile Creators' : val === 'fr' ? 'Vos créateurs de sourire' : val === 'ru' ? 'Создатели вашей улыбки' : val === 'ur' ? 'Gülüş Yaratıcılarınız' : 'Your Smile Creators'}</h2>
+            <p className='mb-0 text-muted'>{val === 'ar' ? 'تعرف على أطبائنا الخبراء' : val === 'us' ? 'Meet Our Expert Doctors' : val === 'fr' ? 'Rencontrez nos médecins experts' : val === 'ru' ? 'Познакомьтесь с нашими врачами-экспертами' : val === 'ur' ? 'Uzman Doktorlarımızla Tanışın' : 'Meet Our Expert Doctors'}</p>
           </div>
-          {Object.keys(doctors).length > 2 ?
+          {Object.keys(staff).length > 2 ?
             <div className="members">
               <Slider {...slider2}>
-                {doctors.map((item, i) => (
-                  <Member key={i} img={item.img} title={item.title} text={item.text} val={val} />
+                {staff.map((item, i) => (
+                  <Member key={i} img={item.Image} title={item.Name} text={item.Desc} val={val} cond={true} />
                 ))}
               </Slider>
             </div>
             :
-            <div className="row gy-4 gx-md-4 d-flex justify-content-center justify-content-md-start align-items-center">
-              <div className="col-lg-4 col-md-6 col-11">
-                <div className="member rounded-4 shadow position-relative mx-auto" style={{border: '5px solid var(--secondColor)' , width: '90%' , cursor: 'pointer'}} dir={val === 'ar' || val ===  'ur' ? 'rtl' : 'ltr'}>
-                    <img src={doctor1} className='rounded-4 w-100' style={{  height: '380px'}} alt="doctor" />
-                    {/* <div className="caption-member rashed-mainBg text-white px-2 pt-2 position-absolute bottom-0 start-0 end-0"> */}
-                    <div className="caption-member rashed-secondBg text-white px-2 pt-2 position-absolute bottom-0 start-0 end-0">
-                        <h5>Dr. Betül Akyıldız</h5>
-                        <p>Orthodontics</p>
-                    </div>
-                </div>
+            Object.keys(staff).length > 0 ?
+              <div className="row gy-4 gx-md-4 d-flex justify-content-center justify-content-md-start align-items-center">
+                {staff.map((item, i) => (
+                  <Member key={i} img={item.Image} title={item.Name} text={item.Desc} val={val} cond={false} />
+                ))}
               </div>
-            </div>
+              :
+              null
           }
 
-          <div className="send text-center mt-5"> 
-              {/* <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target="blank"> */}
-              <button className="animated-button1 whats fix-whats3 w-btn w-btn-open" target="blank">
-                  <span></span><span></span><span></span><span></span>
-                  <div className="dt">
-                      <div className="dtc">
-                          <p>WhatsApp
-                              <label>Get Immediate Info</label>
-                          </p>
-                      </div>
-                      <div className="dtc">
-                          <i className="fab fa-whatsapp"></i>
-                      </div>
-                  </div>
-              </button>
-          </div>
+          {whatsNumber !== null && whatsNumber !== undefined ?
+                <div className="send text-center mt-5"> 
+                    {/* <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer"> */}
+                    <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats3 w-btn w-btn-open rounded-2" target='_blank' rel="noreferrer">
+                        <span></span><span></span><span></span><span></span>
+                        <div className="dt">
+                            <div className="dtc">
+                                <p>WhatsApp
+                                    <label>{val === 'ar' ? 'احصل على معلومات فورية' : val === 'us' ? 'Get Immediate Info' : val === 'fr' ? 'Obtenez des informations immédiates' : val === 'ru' ? 'Получить немедленную информацию' : val === 'ur' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
+                                </p>
+                            </div>
+                            <div className="dtc">
+                                <i className="fab fa-whatsapp"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                :
+                null
+          }
         </div>
       </section>
     </>

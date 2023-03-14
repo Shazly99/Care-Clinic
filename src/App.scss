@@ -842,6 +842,10 @@ header .caption h1 {
         }
     }
 
+    @media screen and (max-width:768px) {
+        height: auto !important;
+    }
+
 
     .smile .layer-smile {
         top: 75%;
@@ -956,10 +960,9 @@ header .caption h1 {
         border-radius: 20px;
         text-align: center;
         padding: 1.5rem;
-        width: 90% !important;
-
+        // width: 90% !important;
         img {
-            width: 80px;
+            width: 90px;
         }
 
         .number {

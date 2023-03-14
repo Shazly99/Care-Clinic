@@ -44,16 +44,22 @@ function App() {
     {loading ?
           <div style={{ position: 'relative' }}>
         
-            <Whats />
-            <Massenger />
+            <Whats whatsNumber={globalData?.contactus?.whatsapp} />
+            <Massenger massengerURL={globalData?.contactus?.Messenger} />
     
-            <Navbar val={val} setVal={setVal} />
+            <Navbar 
+              val={val} setVal={setVal} 
+              whatsNumber={globalData?.contactus?.whatsapp} 
+              massengerURL={globalData?.contactus?.Messenger}
+              phone={globalData?.contactus?.Phone}
+              email={globalData?.contactus?.Email}
+            />
     
-            <Home val={val} />
+            <Home val={val} sec2={globalData?.section2} staff={globalData?.staff} whatsNumber={globalData?.contactus?.whatsapp} />
     
             <div id="shazly">
               <Protocol val={val} />
-              <ChangeSmile val={val} />
+              <ChangeSmile val={val} sec5={globalData?.section5} whatsNumber={globalData?.contactus?.whatsapp} sec6={globalData?.section6} />
             </div>
           </div>
           :
