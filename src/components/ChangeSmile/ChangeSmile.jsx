@@ -1,16 +1,16 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap'
 import Slider from "react-slick";
-import { BsWhatsapp } from "react-icons/bs";
+// import { BsWhatsapp } from "react-icons/bs";
 
-import img1 from '../../img/implant.png'
-import img2 from '../../img/orth.png'
-import img3 from '../../img/smile.png'
+// import img1 from '../../img/implant.png'
+// import img2 from '../../img/orth.png'
+// import img3 from '../../img/smile.png'
 import MemberSmail from './MemberSmail';
 import icons1 from '../../img/img/icons/1.png'
-import icons2 from '../../img/img/icons/2.png'
-import icons3 from '../../img/img/icons/3.png'
-import icons4 from '../../img/img/icons/4.png'
+// import icons2 from '../../img/img/icons/2.png'
+// import icons3 from '../../img/img/icons/3.png'
+// import icons4 from '../../img/img/icons/4.png'
 import logo from '../../img/logo.png'
 import iso1 from '../../img/iso-1.png'
 import iso2 from '../../img/iso-4.png'
@@ -22,7 +22,8 @@ import partner4 from '../../img/img/icdm.png'
 import PhoneInput from 'react-phone-input-2';
 
 
-const ChangeSmile = ({val}) => {
+const ChangeSmile = ({val , sec5 , sec6 , whatsNumber}) => {
+
 
   const slider2 = {
     dots: true,
@@ -52,60 +53,60 @@ const ChangeSmile = ({val}) => {
     ]
   };
 
-  const Smiles =
-    [
-      {
-        id: 1,
-        img: img1,
-        title: 'Clear Aligner & Invisalign',
-        text: `Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
-        straighten the teeth over time without the hassle, pain, and no look of metal
-        braces, it is the new innovation of orthodontics.`
-      },
-      {
-        id: 2,
-        img: img2,
-        title: `Hollywood Smile`,
-        text: `Hollywood smile combines cosmetic and/or restorative dentistry treatments to make
-        you
-        SMILE LIKE A SUPER STAR. Esthetic Dental Veneers can help to cover imperfections
-        in
-        your smile through a personalized treatment plan to fit your needs and desires.`
-      },
-      {
-        id: 3,
-        img: img3,
-        title: `Dental Implants`,
-        text: `Dental implants can be surgically placed into the jawbone to replace one or more
-        missing teeth with a natural-looking, comfortable restoration. It is the ideal
-        solution to replace your missed teeth.`
-      },
-      // {
-      //   id: 4,
-      //   img: img1,
-      //   title: `Clear Aligner & Invisalign`,
-      //   text: `Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
-      //   straighten the teeth over time without the hassle, pain, and no look of metal
-      //   braces, it is the new innovation of orthodontics.`
-      // },
-      // {
-      //   id: 5,
-      //   img: img2,
-      //   title: `Clear Aligner & Invisalign`,
-      //   text: `Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
-      //   straighten the teeth over time without the hassle, pain, and no look of metal
-      //   braces, it is the new innovation of orthodontics.`
-      // },
-      // {
-      //   id: 6,
-      //   img: img3,
-      //   title: `Clear Aligner & Invisalign`,
-      //   text: `Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
-      //   straighten the teeth over time without the hassle, pain, and no look of metal
-      //   braces, it is the new innovation of orthodontics.`
-      // },
+  // const Smiles =
+  //   [
+  //     {
+  //       id: 1,
+  //       img: img1,
+  //       title: 'Clear Aligner & Invisalign',
+  //       text: `Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
+  //       straighten the teeth over time without the hassle, pain, and no look of metal
+  //       braces, it is the new innovation of orthodontics.`
+  //     },
+  //     {
+  //       id: 2,
+  //       img: img2,
+  //       title: `Hollywood Smile`,
+  //       text: `Hollywood smile combines cosmetic and/or restorative dentistry treatments to make
+  //       you
+  //       SMILE LIKE A SUPER STAR. Esthetic Dental Veneers can help to cover imperfections
+  //       in
+  //       your smile through a personalized treatment plan to fit your needs and desires.`
+  //     },
+  //     {
+  //       id: 3,
+  //       img: img3,
+  //       title: `Dental Implants`,
+  //       text: `Dental implants can be surgically placed into the jawbone to replace one or more
+  //       missing teeth with a natural-looking, comfortable restoration. It is the ideal
+  //       solution to replace your missed teeth.`
+  //     },
+  //     // {
+  //     //   id: 4,
+  //     //   img: img1,
+  //     //   title: `Clear Aligner & Invisalign`,
+  //     //   text: `Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
+  //     //   straighten the teeth over time without the hassle, pain, and no look of metal
+  //     //   braces, it is the new innovation of orthodontics.`
+  //     // },
+  //     // {
+  //     //   id: 5,
+  //     //   img: img2,
+  //     //   title: `Clear Aligner & Invisalign`,
+  //     //   text: `Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
+  //     //   straighten the teeth over time without the hassle, pain, and no look of metal
+  //     //   braces, it is the new innovation of orthodontics.`
+  //     // },
+  //     // {
+  //     //   id: 6,
+  //     //   img: img3,
+  //     //   title: `Clear Aligner & Invisalign`,
+  //     //   text: `Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
+  //     //   straighten the teeth over time without the hassle, pain, and no look of metal
+  //     //   braces, it is the new innovation of orthodontics.`
+  //     // },
 
-    ]
+  //   ]
 
 
     const slider3 = {
@@ -145,33 +146,33 @@ const ChangeSmile = ({val}) => {
       ]
     };
 
-    const numss =
-    [
-      {
-        id: 1,
-        number: '17',
-        title: 'Dental Clinics',
-        icon: icons1,
-      },
-      {
-        id: 2,
-        number: '50',
-        title: 'Doctors Staff',
-        icon: icons2,
-      },
-      {
-        id: 3,
-        number: '20',
-        title: 'Years of Experience',
-        icon: icons3,
-      },
-      {
-        id: 4,
-        number: '96',
-        title: 'Satisfaction Rate',
-        icon: icons4,
-      },
-    ]
+    // const numss =
+    // [
+    //   {
+    //     id: 1,
+    //     number: '17',
+    //     title: 'Dental Clinics',
+    //     icon: icons1,
+    //   },
+    //   {
+    //     id: 2,
+    //     number: '50',
+    //     title: 'Doctors Staff',
+    //     icon: icons2,
+    //   },
+    //   {
+    //     id: 3,
+    //     number: '20',
+    //     title: 'Years of Experience',
+    //     icon: icons3,
+    //   },
+    //   {
+    //     id: 4,
+    //     number: '96',
+    //     title: 'Satisfaction Rate',
+    //     icon: icons4,
+    //   },
+    // ]
 
 
   return (
@@ -180,48 +181,49 @@ const ChangeSmile = ({val}) => {
       <div className="app__ChangeSmile" dir={val === 'ar' || val ===  'ur' ? 'rtl' : 'ltr'}>
         <Container >
           <div className="main-title-section text-center">
-            <h2 className='rashed-secondColor'>We Change Your Smile, You Change Your Life</h2>
+            <h2 className='rashed-secondColor'>{val === 'ar' ? 'نغير ابتسامتك ، أنت تغير حياتك' : val === 'us' ? 'We Change Your Smile, You Change Your Life' : val === 'fr' ? 'Nous changeons votre sourire, vous changez votre vie' : val === 'ru' ? 'Мы меняем твою улыбку, ты меняешь свою жизнь' : val === 'ur' ? 'Gülüşünü Değiştiriyoruz, Sen Hayatını Değiştiriyorsun' : 'We Change Your Smile, You Change Your Life'}</h2>
           </div>
-          <Row className='app__ChangeSmile-img mt-5' dir={val === 'ar' || val ===  'ur' ? 'rtl' : 'ltr'}>
-            {Object.keys(Smiles).length > 2 ?
+          <Row className='app__ChangeSmile-img mt-5 gy-4' dir={val === 'ar' || val ===  'ur' ? 'rtl' : 'ltr'}>
+            {Object.keys(sec5).length > 2 ?
               <Slider {...slider2}>
-                {Smiles.map((item, i) => (
-                  <MemberSmail val={val} key={i} img={item.img} title={item.title} text={item.text} />
+                {sec5.map((item, i) => (
+                  <MemberSmail val={val} key={i} img={item.Image} title={item.Title} text={item.Body} cond={true} />
                 ))}
               </Slider>
               :
-              <div className="col-lg-4 col-md-6 col-11">
-                  <div className="smile rounded-4 shadow position-relative mx-auto overflow-hidden" style={{ border: '4px solid var(--mainColor)' , width: '90%'}}  dir={val === 'ar' || val ===  'ur' ? 'rtl' : 'ltr'}>
-                    <img src={img1} className='w-100' style={{height: '240px'}} alt="member-img" />
-                    <div className="layer-smile rashed-mainBg h-100 position-absolute py-3 px-1">
-                      <h5 className='mb-4' style={{fontWeight: 600}}>
-                        <i className={`fas fa-cloud ${val === 'ar' || val ===  'ur' ? 'ms-2' : 'me-2'}`}></i>
-                        Clear Aligner & Invisalign
-                      </h5>
-                      <p>
-                        Invisalign or Clear Alaigner is a series of clear teeth aligners that work to
-                        straighten the teeth over time without the hassle, pain, and no look of metal
-                        braces, it is the new innovation of orthodontics.
-                      </p>
-                    </div>
-                  </div>
-              </div>
+              Object.keys(sec5).length > 0 ?
+                <>
+                  {sec5.map((item, i) => (
+                    <MemberSmail val={val} key={i} img={item.Image} title={item.Title} text={item.Body} cond={false} />
+                  ))}
+                </>
+                :
+                null
             }
 
           </Row>
-          <div className="center btn__animation" dir={val === 'ar' || val ===  'ur' || 'ur'? 'rtl' : 'ltr'}>
-            <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target="blank">
-              <span></span><span></span><span></span><span></span>
-              <div className="dt">
-                <div className="dtc">
-                  <p>WhatsApp <label>Get Immediate Info</label>  </p>
+
+          {whatsNumber !== null && whatsNumber !== undefined ?
+                <div className="send text-center mt-5"> 
+                    {/* <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer"> */}
+                    <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open rounded-2" target='_blank' rel="noreferrer">
+                        <span></span><span></span><span></span><span></span>
+                        <div className="dt">
+                            <div className="dtc">
+                                <p>WhatsApp
+                                    <label>{val === 'ar' ? 'احصل على معلومات فورية' : val === 'us' ? 'Get Immediate Info' : val === 'fr' ? 'Obtenez des informations immédiates' : val === 'ru' ? 'Получить немедленную информацию' : val === 'ur' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
+                                </p>
+                            </div>
+                            <div className="dtc">
+                                <i className="fab fa-whatsapp"></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div className="dtc">
-                  <BsWhatsapp />
-                </div>
-              </div>
-            </button>
-          </div>
+                :
+                null
+          }
+
         </Container>
       </div>
 
@@ -229,62 +231,53 @@ const ChangeSmile = ({val}) => {
 
         <Container>
 
-          {Object.keys(numss).length > 3 ?
+          {Object.keys(sec6).length > 3 ?
             <Slider {...slider3} className='text-center'>
-              {numss.map((item, i) => (
-                <div key={i} className="numb text-white">
-                  <img src={item.icon} className='mx-auto' alt="icon-img" />
+              {sec6.map((item, i) => (
+                <div key={i} className="numb text-white" style={{width: '90%'}}>
+                  <img src={item.image !== null && item.image !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.image}` : icons1} className='mx-auto' alt="icon-img" />
                   <h2>
-                    {item.number}
+                    {item.Body !== null && item.Body !== undefined ? item.Body : 'test'}
                     <span>+</span>
                   </h2>
-                  <p style={{fontWeight: '500' , whiteSpace: 'nowrap'}}>{item.title}</p>
+                  <p style={{fontWeight: '500' , whiteSpace: 'nowrap'}}>{item.Title !== null && item.Title !== undefined ? item.Title : 'test'}</p>
                 </div>
               ))}
             </Slider>
             :
-            <div className="row gy-4 ">
-              <div className=" col-md-3 col-6">
-                <div className="numb text-white">
-                  <img src={icons1} alt="icon-img" />
-                  <h2>
-                    17
-                    <span>+</span>
-                  </h2>
-                  <p style={{fontWeight: '500' , whiteSpace: 'nowrap'}}>Dental Clinics</p>
+              Object.keys(sec6).length > 2 ?
+                <div className="row gy-4 ">
+                  {sec6.map((item , i) => (
+                    <div key={i} className="col-4">
+                      <div className="numb text-white">
+                        <img src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' alt="icon-img" />
+                        <h2>
+                          {item.StringValue !== null && item.StringValue !== undefined ? item.StringValue : 'test'}
+                          <span>+</span>
+                        </h2>
+                        <p style={{fontWeight: '500' , whiteSpace: 'nowrap'}}>{item.StringKey !== null && item.StringKey !== undefined ? item.StringKey : 'test'}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </div>
-              <div className=" col-md-3 col-6">
-                <div className="numb text-white">
-                  <img src={icons2} alt="icon-img" />
-                  <h2>
-                    50
-                    <span>+</span>
-                  </h2>
-                  <p style={{fontWeight: '500' , whiteSpace: 'nowrap'}}>Doctors &amp; Staff</p>
+                :
+                Object.keys(sec6).length > 0 ?
+                <div className="row gy-4 ">
+                  {sec6.map((item , i) => (
+                    <div key={i} className="col-lg-4 col-6">
+                      <div className="numb text-white">
+                        <img src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' alt="icon-img" />
+                        <h2>
+                          {item.StringValue !== null && item.StringValue !== undefined ? item.StringValue : 'test'}
+                          <span>+</span>
+                        </h2>
+                        <p style={{fontWeight: '500' , whiteSpace: 'nowrap'}}>{item.StringKey !== null && item.StringKey !== undefined ? item.StringKey : 'test'}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </div>
-              <div className=" col-md-3 col-6">
-                <div className="numb text-white mt">
-                  <img src={icons3} alt="icon-img" />
-                  <h2>
-                    20
-                    <span>+</span>
-                  </h2>
-                  <p style={{fontWeight: '500' , whiteSpace: 'nowrap'}}>Years of Experience</p>
-                </div>
-              </div>
-              <div className=" col-md-3  col-6">
-                <div className="numb text-white mt">
-                  <img src={icons4} alt="icon-img" />
-                  <h2>
-                    96
-                    <span>+</span>
-                  </h2>
-                  <p style={{fontWeight: '500' , whiteSpace: 'nowrap'}}>Satisfaction Rate</p>
-                </div>
-              </div>
-            </div>
+                :
+                null
           }
         </Container>
       </div>
@@ -325,21 +318,23 @@ const ChangeSmile = ({val}) => {
         <Container>
           <div className='grid'>
             <div className="content">
-              <p className='h6'>   The most qualified, skillful and professional Doct
-
+              <p className='h6'>
+                {val === 'ar' ? 'الطبيب الأكثر تأهيلا ومهارة ومهنية' : val === 'us' ? 'The most qualified, skillful and professional Doctor' : val === 'fr' ? 'Le médecin le plus qualifié, le plus habile et le plus professionnel' : val === 'ru' ? 'Самый квалифицированный, умелый и профессиональный врач' : val === 'ur' ? 'En nitelikli, yetenekli ve profesyonel Doktor' : 'The most qualified, skillful and professional Doctor'}
               </p>
             </div>
             <div className="visible-xs">
               {/* <button className="animated-button1 whats fix-whats3 btn w-btn-open"> */}
-              <button className="animated-button1 whats fix-whats2 btn w-btn-open">
+              <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} target='_blank' rel="noreferrer" className="animated-button1 whats fix-whats2 btn w-btn-open">
                 <span></span><span></span><span></span><span></span>
                 <div className="dt d-flex justify-content-center align-item-center flex-row"><div className="dtc">
-                  <p>WhatsApp<label>Get Immediate Info</label></p>
+                  <p>WhatsApp
+                    <label>{val === 'ar' ? 'احصل على معلومات فورية' : val === 'us' ? 'Get Immediate Info' : val === 'fr' ? 'Obtenez des informations immédiates' : val === 'ru' ? 'Получить немедленную информацию' : val === 'ur' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
+                  </p>
                   </div><div className="dtc"><i className="fab fa-whatsapp">
                     </i>
                     </div>
                     </div>
-                    </button>
+                    </a>
                     </div>
           </div>
         </Container>
@@ -369,22 +364,22 @@ const ChangeSmile = ({val}) => {
                   <br />
                   info@dentspa.com</p>
                   <ul className="list-unstyled list-inline social">
-                      <li><a href="tel://+90 542 258 88 39" style= {{color: '#3b5998',background:'#ecf0f8'}} >
+                      <li><a href="tel://+90 542 258 88 39" target='_blank' rel="noreferrer" style= {{color: '#3b5998',background:'#ecf0f8'}} >
                               <i className="fas fa-phone"  ></i> </a>
                       </li>
                       <li> 
-                        <a href="https://wa.me/905422588839?text=Hello%2C+Can+I+book+an+appointment%21" target="blank" style={{ color: '#25d366 ',background:' #25d3661f' }}
+                        <a href="https://wa.me/905422588839?text=Hello%2C+Can+I+book+an+appointment%21"  target='_blank' rel="noreferrer" style={{ color: '#25d366 ',background:' #25d3661f' }}
                                 >
                               <i className="fab fa-whatsapp"></i> </a>
                 
                       </li>
-                      <li><a href="https://m.me/DentSpaINT" target="blank" style= {{color:' #0084ff',background:' #ecf5f8'}} >
+                      <li><a href="https://m.me/DentSpaINT"  target='_blank' rel="noreferrer" style= {{color:' #0084ff',background:' #ecf5f8'}} >
                               <i className="fab fa-facebook-messenger"></i> </a>
                       </li>
                       <li><a href="mailto:info@dentspa.com.tr" style={{ color:' #bc2a8d ',background:' #f8ecf4' }}>
                               <i className="far fa-envelope"></i> </a>
                       </li>
-                      <li><a href="https://www.google.com/maps/dir//Teşvikiye+Mahallesi,+DentSpa+Ağız+ve+Diş+Sağlığı+Polikliniği,+Şişli%2FIstanbul/" target="blank" style={{ color:' #dc4b3e',background:' #b2f3fe'  }}>
+                      <li><a href="https://www.google.com/maps/dir//Teşvikiye+Mahallesi,+DentSpa+Ağız+ve+Diş+Sağlığı+Polikliniği,+Şişli%2FIstanbul/"  target='_blank' rel="noreferrer" style={{ color:' #dc4b3e',background:' #b2f3fe'  }}>
                               <i className="fas fa-map-marker-alt"></i> </a>
                       </li>
                   </ul>
