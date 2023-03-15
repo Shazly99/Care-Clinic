@@ -117,8 +117,8 @@ const Protocol = ({ val, whatsNumber, sec4 ,slider}) => {
 
               <div className="img-tab">
                 <Slider {...slider1} className='text-center' dir='ltr'>
-                  {slider?.map((item, i) => (
-                    <img loading='lazy' key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                  {slider.filter(el => el.sect === "4").map((item, i) => (
+                    <img key={i} loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4' />
                   ))}
                 </Slider>
               </div>
