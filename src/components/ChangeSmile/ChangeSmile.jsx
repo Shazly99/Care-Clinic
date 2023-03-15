@@ -88,18 +88,18 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
           <div className="main-title-section text-center">
             <h2 className='rashed-secondColor'>{val === '1' ? 'نغير ابتسامتك ، أنت تغير حياتك' : val === 'us' ? 'We Change Your Smile, You Change Your Life' : val === 'fr' ? 'Nous changeons votre sourire, vous changez votre vie' : val === 'ru' ? 'Мы меняем твою улыбку, ты меняешь свою жизнь' : val === 'ur' ? 'Gülüşünü Değiştiriyoruz, Sen Hayatını Değiştiriyorsun' : 'We Change Your Smile, You Change Your Life'}</h2>
           </div>
-          <Row className='app__ChangeSmile-img mt-5 gy-4' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
+          <Row className='app__ChangeSmile-img mt-5 gy-4 d-flex justify-content-center align-items-center' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
             {Object.keys(sec5).length > 2 ?
               <Slider {...slider2}>
                 {sec5.map((item, i) => (
-                  <MemberSmail val={val} key={i} img={item.Image} title={item.Title} text={item.Body} cond={true} />
+                  <MemberSmail val={val} key={i} img={item.image} title={item.Title} text={item.Body} cond={true} />
                 ))}
               </Slider>
               :
               Object.keys(sec5).length > 0 ?
                 <>
                   {sec5.map((item, i) => (
-                    <MemberSmail val={val} key={i} img={item.Image} title={item.Title} text={item.Body} cond={false} />
+                    <MemberSmail val={val} key={i} img={item.image} title={item.Title} text={item.Body} cond={false} />
                   ))}
                 </>
                 :
@@ -136,44 +136,44 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
           {Object.keys(sec6).length > 3 ?
             <Slider {...slider3} className='text-center'>
               {sec6.map((item, i) => (
-                <div key={i} className="numb text-white" style={{ width: '90%' }}>
-                  <img src={item.image !== null && item.image !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.image}` : icons1} className='mx-auto' alt="icon-img" />
+                <div key={i} className="numb text-white numb-slide">
+                  <img src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' style={{height: '90px'}} alt="icon-img" />
                   <h2>
-                    {item.Body !== null && item.Body !== undefined ? item.Body : 'test'}
+                    {item.StringValue !== null && item.StringValue !== undefined ? item.StringValue : ''}
                     <span>+</span>
                   </h2>
-                  <p style={{ fontWeight: '500', whiteSpace: 'nowrap' }}>{item.Title !== null && item.Title !== undefined ? item.Title : 'test'}</p>
+                  <p style={{ fontWeight: '500', whiteSpace: 'nowrap' }}>{item.StringKey !== null && item.StringKey !== undefined ? item.StringKey : ''}</p>
                 </div>
               ))}
             </Slider>
             :
-            Object.keys(sec6).length > 2 ?
-              <div className="row gy-4 ">
+            Object.keys(sec6).length == 3 ?
+              <div className="row gy-4 gx-4 d-flex justify-content-center align-items-center">
                 {sec6.map((item, i) => (
                   <div key={i} className="col-4">
                     <div className="numb text-white">
-                      <img src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' alt="icon-img" />
+                      <img src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' style={{height: '90px'}} alt="icon-img" />
                       <h2>
-                        {item.StringValue !== null && item.StringValue !== undefined ? item.StringValue : 'test'}
+                        {item.StringValue !== null && item.StringValue !== undefined ? item.StringValue : ''}
                         <span>+</span>
                       </h2>
-                      <p style={{ fontWeight: '500', whiteSpace: 'nowrap' }}>{item.StringKey !== null && item.StringKey !== undefined ? item.StringKey : 'test'}</p>
+                      <p style={{ fontWeight: '500', whiteSpace: 'nowrap' }}>{item.StringKey !== null && item.StringKey !== undefined ? item.StringKey : ''}</p>
                     </div>
                   </div>
                 ))}
               </div>
               :
               Object.keys(sec6).length > 0 ?
-                <div className="row gy-4 ">
+                <div className="row gy-4 gx-4 d-flex justify-content-center align-items-center">
                   {sec6.map((item, i) => (
                     <div key={i} className="col-lg-4 col-6">
                       <div className="numb text-white">
-                        <img src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' alt="icon-img" />
+                        <img src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' style={{height: '90px'}} alt="icon-img" />
                         <h2>
-                          {item.StringValue !== null && item.StringValue !== undefined ? item.StringValue : 'test'}
+                          {item.StringValue !== null && item.StringValue !== undefined ? item.StringValue : ''}
                           <span>+</span>
                         </h2>
-                        <p style={{ fontWeight: '500', whiteSpace: 'nowrap' }}>{item.StringKey !== null && item.StringKey !== undefined ? item.StringKey : 'test'}</p>
+                        <p style={{ fontWeight: '500', whiteSpace: 'nowrap' }}>{item.StringKey !== null && item.StringKey !== undefined ? item.StringKey : ''}</p>
                       </div>
                     </div>
                   ))}
@@ -203,7 +203,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
             {brand.map((item, i) => (
               <Col xl={3} lg={3} md={4} className='col-6'>
                 <div className="partimg">
-                  <img src={`https://cureclinckapi.amlakturks.com/storage/app/brands/` + item.Image} alt="part" className=" w-100" />
+                  <img src={`https://cureclinckapi.amlakturks.com/storage/app/brands/` + item.Image} alt="part" className=" w-100" style={{height: '150px'}} />
                 </div>
               </Col>
             ))}

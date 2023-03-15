@@ -950,6 +950,10 @@ header .caption h1 {
     // background: rgba(32, 187, 175, 1);
     background: var(--mainColor);
 
+    .numb-slide {
+        width: 90% !important;
+    }
+
     .numb {
         display: flex;
         justify-content: center;
