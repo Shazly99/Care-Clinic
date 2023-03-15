@@ -10,7 +10,7 @@ import teeth3 from './img/img/gif/3.png';
 import teeth4 from './img/img/gif/4.png';
 import Member from './Member';
 
-export default function Home({sec3,slider, sec1, val, sec2, staff, whatsNumber }) {
+export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber }) {
 
   const slider1 = {
     dots: false,
@@ -175,15 +175,20 @@ export default function Home({sec3,slider, sec1, val, sec2, staff, whatsNumber }
           <ul className="nav nav-pills justify-content-center mb-5" id="pills-tab" role="tablist">
             <li className="nav-item" role="presentation">
               <button className="nav-link active" id="pills-beforeafter-tab" data-bs-toggle="pill" data-bs-target="#pills-beforeafter" type="button" role="tab" aria-controls="pills-beforeafter" aria-selected="true">
-              {val === '1' ? 'قبل بعد' : val === '2' ? 'Before & After' : val === '3' ? 'Avant après' : val === '4' ? 'До после' : val === '5' ? 'Önce sonra' : 'قبل و بعد'}
-              
+                {val === '1' ? 'قبل بعد' : val === '2' ? 'Before & After' : val === '3' ? 'Avant après' : val === '4' ? 'До после' : val === '5' ? 'Önce sonra' : 'قبل و بعد'}
+
               </button>
             </li>
             <li className="nav-item" role="presentation">
-              <button className="nav-link" id="pills-place-tab" data-bs-toggle="pill" data-bs-target="#pills-place" type="button" role="tab" aria-controls="pills-place" aria-selected="false">Your Luxury Place</button>
+              <button className="nav-link" id="pills-place-tab" data-bs-toggle="pill" data-bs-target="#pills-place" type="button" role="tab" aria-controls="pills-place" aria-selected="false">
+                {val === '1' ? '  مكانك الفاخر' : val === '2' ? ' Your Luxury Place' : val === '3' ? 'Votre lieu de luxe' : val === '4' ? 'Ваше роскошное место  ' : val === '5' ? 'Ваше роскошное место  ' : '  مكانك الفاخرو  '}
+              </button>
             </li>
             <li className="nav-item" role="presentation">
-              <button className="nav-link" id="pills-patients-tab" data-bs-toggle="pill" data-bs-target="#pills-patients" type="button" role="tab" aria-controls="pills-patients" aria-selected="false">Our Happy Patients</button>
+              <button className="nav-link" id="pills-patients-tab" data-bs-toggle="pill" data-bs-target="#pills-patients" type="button" role="tab" aria-controls="pills-patients" aria-selected="false">
+              {val === '1' ? 'مرضانا السعداء' : val === '2' ? ' Our Happy Patients' : val === '3' ? 'Nos patients heureux' : val === '4' ? ' Наши счастливые пациенты  ' : val === '5' ? 'Mutlu Hastalarımız' : 'مرضانا السعداء'}
+                
+                </button>
             </li>
           </ul>
 
@@ -212,11 +217,11 @@ export default function Home({sec3,slider, sec1, val, sec2, staff, whatsNumber }
                 </div>
                 <div className="col-md-6 col-11">
                   <div className="img-tab">
-                <Slider {...slider1} className='text-center' dir='ltr'>
-                  {slider?.map((item, i) => (
-                    <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
-                  ))}
-                </Slider>
+                    <Slider {...slider1} className='text-center' dir='ltr'>
+                      {slider?.map((item, i) => (
+                        <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                      ))}
+                    </Slider>
                     {/* <img src={teeth} className='w-100 rounded-4' alt="patient" /> */}
                   </div>
                 </div>
@@ -230,7 +235,7 @@ export default function Home({sec3,slider, sec1, val, sec2, staff, whatsNumber }
                   <div className="caption-tab text-white">
                     <h2 className='fw-bold mb-2'>{sec3?.LTitle} </h2>
                     <p className='mb-2'>{sec3?.LBody}</p>
-                     <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
+                    <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                       <span></span><span></span><span></span><span></span>
                       <div className="dt">
                         <div className="dtc">
@@ -283,11 +288,11 @@ export default function Home({sec3,slider, sec1, val, sec2, staff, whatsNumber }
                 </div> */}
                 <div className="col-md-6 col-11">
                   <div className="img-tab">
-                <Slider {...slider1} className='text-center' dir='ltr'>
-                  {slider?.map((item, i) => (
-                    <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
-                  ))}
-                </Slider>
+                    <Slider {...slider1} className='text-center' dir='ltr'>
+                      {slider?.map((item, i) => (
+                        <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                      ))}
+                    </Slider>
                     {/* <img src={teeth} className='w-100 rounded-4' alt="patient" /> */}
                   </div>
                 </div>
@@ -354,11 +359,11 @@ export default function Home({sec3,slider, sec1, val, sec2, staff, whatsNumber }
                 </div> */}
                 <div className="col-md-6 col-11">
                   <div className="img-tab">
-                <Slider {...slider1} className='text-center' dir='ltr'>
-                  {slider?.map((item, i) => (
-                    <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
-                  ))}
-                </Slider>
+                    <Slider {...slider1} className='text-center' dir='ltr'>
+                      {slider?.map((item, i) => (
+                        <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                      ))}
+                    </Slider>
                     {/* <img src={teeth} className='w-100 rounded-4' alt="patient" /> */}
                   </div>
                 </div>
