@@ -7,7 +7,7 @@ import logo from '../../img/logo.png'
 import iso1 from '../../img/iso-1.png'
 import iso2 from '../../img/iso-4.png'
 import iso3 from '../../img/iso-3.png'
-import partner1 from '../../img/img/armaera.png'
+// import partner1 from '../../img/img/armaera.png'
 import PhoneInput from 'react-phone-input-2';
 
 
@@ -137,7 +137,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
             <Slider {...slider3} className='text-center'>
               {sec6.map((item, i) => (
                 <div key={i} className="numb text-white numb-slide">
-                  <img src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' style={{height: '90px'}} alt="icon-img" />
+                  <img loading='lazy' src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' style={{height: '90px'}} alt="icon-img" />
                   <h2>
                     {item.StringValue !== null && item.StringValue !== undefined ? item.StringValue : ''}
                     <span>+</span>
@@ -147,12 +147,12 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
               ))}
             </Slider>
             :
-            Object.keys(sec6).length == 3 ?
+            Object.keys(sec6).length === 3 ?
               <div className="row gy-4 gx-4 d-flex justify-content-center align-items-center">
                 {sec6.map((item, i) => (
                   <div key={i} className="col-4">
                     <div className="numb text-white">
-                      <img src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' style={{height: '90px'}} alt="icon-img" />
+                      <img loading='lazy' src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' style={{height: '90px'}} alt="icon-img" />
                       <h2>
                         {item.StringValue !== null && item.StringValue !== undefined ? item.StringValue : ''}
                         <span>+</span>
@@ -168,7 +168,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
                   {sec6.map((item, i) => (
                     <div key={i} className="col-lg-4 col-6">
                       <div className="numb text-white">
-                        <img src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' style={{height: '90px'}} alt="icon-img" />
+                        <img loading='lazy' src={item.fileUrl !== null && item.fileUrl !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section6/${item.fileUrl}` : icons1} className='mx-auto' style={{height: '90px'}} alt="icon-img" />
                         <h2>
                           {item.StringValue !== null && item.StringValue !== undefined ? item.StringValue : ''}
                           <span>+</span>
@@ -203,7 +203,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
             {brand.map((item, i) => (
               <Col xl={3} lg={3} md={4} className='col-6'>
                 <div className="partimg">
-                  <img src={`https://cureclinckapi.amlakturks.com/storage/app/brands/` + item.Image} alt="part" className=" w-100" style={{height: '150px'}} />
+                  <img loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/brands/` + item.Image} alt="part" className=" w-100" style={{height: '140px'}} />
                 </div>
               </Col>
             ))}
@@ -241,12 +241,12 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
         <Container>
           <Row dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
             <Col xl={3} lg={3} md={5} sm={11}>
-              <img src={logo} width={175} style={{ height: '120px' }} alt="logo" />
+              <img loading='lazy' src={logo} width={175} style={{ height: '120px' }} alt="logo" />
               <p className='mt-32'>{contactus?.footerText}</p>
               <div className="iso__footer">
-                <img src={iso1} alt="iso" />
-                <img src={iso2} alt="iso" />
-                <img src={iso3} alt="iso" />
+                <img loading='lazy' src={iso1} alt="iso" />
+                <img loading='lazy' src={iso2} alt="iso" />
+                <img loading='lazy' src={iso3} alt="iso" />
               </div>
             </Col>
             <Col xl={3} lg={3} md={5} sm={11}>

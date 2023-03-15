@@ -4,10 +4,10 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import img111 from './img/img/slider.png';
 import img1 from './img/img/img1.png';
-import teeth1 from './img/img/gif/1.png';
-import teeth2 from './img/img/gif/2.png';
-import teeth3 from './img/img/gif/3.png';
-import teeth4 from './img/img/gif/4.png';
+// import teeth1 from './img/img/gif/1.png';
+// import teeth2 from './img/img/gif/2.png';
+// import teeth3 from './img/img/gif/3.png';
+// import teeth4 from './img/img/gif/4.png';
 import Member from './Member';
 
 export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber }) {
@@ -26,29 +26,30 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
     cssEase: "linear",
 
   };
-  const cases =
-    [
-      {
-        id: 1,
-        img: teeth1,
-        alt: '111'
-      },
-      {
-        id: 2,
-        img: teeth2,
-        alt: '222'
-      },
-      {
-        id: 3,
-        img: teeth3,
-        alt: '333'
-      },
-      {
-        id: 4,
-        img: teeth4,
-        alt: '444'
-      }
-    ]
+
+  // const cases =
+  //   [
+  //     {
+  //       id: 1,
+  //       img: teeth1,
+  //       alt: '111'
+  //     },
+  //     {
+  //       id: 2,
+  //       img: teeth2,
+  //       alt: '222'
+  //     },
+  //     {
+  //       id: 3,
+  //       img: teeth3,
+  //       alt: '333'
+  //     },
+  //     {
+  //       id: 4,
+  //       img: teeth4,
+  //       alt: '444'
+  //     }
+  //   ]
 
   const slider2 = {
     dots: true,
@@ -148,7 +149,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
               <Slider {...slider2}>
                 {sec2.map((item, i) => (
                   <div key={i} className="feature">
-                    <img src={item.FilePath !== null && item.FilePath !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section2/${item?.FilePath}` : img1} className='w-75' style={{ height: '180px' }} alt="doctor" />
+                    <img loading='lazy' src={item.FilePath !== null && item.FilePath !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section2/${item?.FilePath}` : img1} className='w-75' style={{ height: '180px' }} alt="doctor" />
                     <h6 className='mb-2'>{item.Title !== null && item.Title !== undefined ? item.Title : 'Title'}</h6>
                     <p className='text-muted' style={{ fontSize: '14px', width: '75%' }}>{item.Body !== null && item.Body !== undefined ? item.Body : 'Body'}</p>
                   </div>
@@ -161,7 +162,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                 {sec2.map((el, i) => (
                   <div key={i} className="col-md-4 col-11">
                     <div className="feature">
-                      <img src={el.FilePath !== null && el.FilePath !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section2/${el?.FilePath}` : img1} className='w-75' style={{ height: '180px' }} alt="doctor" />
+                      <img loading='lazy' src={el.FilePath !== null && el.FilePath !== undefined ? `https://cureclinckapi.amlakturks.com/storage/app/section2/${el?.FilePath}` : img1} className='w-75' style={{ height: '180px' }} alt="doctor" />
                       <h6 className='mb-2'>{el.Title !== null && el.Title !== undefined ? el.Title : 'Title'}</h6>
                       <p className='text-muted' style={{ fontSize: '14px', width: '75%' }}>{el.Body !== null && el.Body !== undefined ? el.Body : 'Body'}</p>
                     </div>
@@ -219,10 +220,10 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   <div className="img-tab">
                     <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider?.map((item, i) => (
-                        <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                        <img loading='lazy' key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
                       ))}
                     </Slider>
-                    {/* <img src={teeth} className='w-100 rounded-4' alt="patient" /> */}
+                    {/* <img loading='lazy' src={teeth} className='w-100 rounded-4' alt="patient" /> */}
                   </div>
                 </div>
               </div>
@@ -254,7 +255,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   <div  className='app__protocol-right'>
                     <div className='video-wrapper' style={{ position: 'relative', boxShadow: '0 25px 80px rgb(0 0 0 / 20%)' }}>
 
-                      <img src={video} alt=""  className='w-100' />
+                      <img loading='lazy' src={video} alt=""  className='w-100' />
 
                       <div className="play" onClick={() => handePlay(1)} data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <BsPlayFill size={29} color={'#fff'} />
@@ -290,10 +291,10 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   <div className="img-tab">
                     <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider?.map((item, i) => (
-                        <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                        <img loading='lazy' key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
                       ))}
                     </Slider>
-                    {/* <img src={teeth} className='w-100 rounded-4' alt="patient" /> */}
+                    {/* <img loading='lazy' src={teeth} className='w-100 rounded-4' alt="patient" /> */}
                   </div>
                 </div>
               </div>
@@ -325,7 +326,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   <div  className='app__protocol-right'>
                     <div className='video-wrapper' style={{ position: 'relative', boxShadow: '0 25px 80px rgb(0 0 0 / 20%)' }}>
 
-                      <img src={patient} alt=""  className='w-100' />
+                      <img loading='lazy' src={patient} alt=""  className='w-100' />
 
                       <div className="play" onClick={() => handePlay(1)} data-bs-toggle="modal" data-bs-target="#exampleModal1">
                         <BsPlayFill size={29} color={'#fff'} />
@@ -361,10 +362,10 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   <div className="img-tab">
                     <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider?.map((item, i) => (
-                        <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                        <img loading='lazy' key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
                       ))}
                     </Slider>
-                    {/* <img src={teeth} className='w-100 rounded-4' alt="patient" /> */}
+                    {/* <img loading='lazy' src={teeth} className='w-100 rounded-4' alt="patient" /> */}
                   </div>
                 </div>
               </div>
@@ -375,7 +376,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
       </section>
 
 
-      <section id='rashed2' className='py-5'>
+      <section id='rashed2' className='py-5' dir={val === '1' || val ===  '5' ? 'rtl' : 'ltr'}>
         <div className="container">
           <div className="main-title-section text-center mb-3">
             <h2 className='rashed-secondColor mb-4 h1'>{val === '1' ? 'صانعـي ابتسامتـك' : val === '2' ? 'Your Smile Creators' : val === '3' ? 'Vos créateurs de sourire' : val === '4' ? 'Создатели вашей улыбки' : val === '5' ? 'Gülüş Yaratıcılarınız' : 'Your Smile Creators'}</h2>
@@ -391,7 +392,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
             </div>
             :
             Object.keys(staff).length > 0 ?
-              <div className="row gy-4 gx-md-4 d-flex justify-content-center justify-content-md-start align-items-center">
+              <div className="row gy-4 gx-md-4 d-flex justify-content-center align-items-center">
                 {staff.map((item, i) => (
                   <Member key={i} img={item.Image} title={item.Name} text={item.Desc} val={val} cond={false} />
                 ))}

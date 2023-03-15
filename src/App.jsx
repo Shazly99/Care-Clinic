@@ -22,7 +22,6 @@ function App() {
       })
       .then((res) => {
         setGlobalData(res.data.data);
-        console.log();
         setLoading(true);
       })
       .catch((err) => {

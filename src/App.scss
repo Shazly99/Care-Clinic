@@ -1763,19 +1763,19 @@ input {
     margin-top: 0;
     // color: #fff;
     box-shadow: none;
-    height: 58px !important;
+    min-height: 55px !important;
     width: 250px !important;
     // margin-right: auto;
     // margin-left: auto;
     color: white !important;
 }
 
-@media screen and (max-width: 600px) {
-    .animated-button1 {
-        width: 200px !important;
-        padding: 12px 20px !important; 
-    }
-}
+// @media screen and (max-width: 600px) {
+//     .animated-button1 {
+//         min-width: 200px !important;
+//         padding: 12px 20px !important; 
+//     }
+// }
 
 .fix-whats {
     // background: linear-gradient(-30deg, #402d75 50%, #3a296c 50%);

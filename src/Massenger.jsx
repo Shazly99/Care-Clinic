@@ -6,7 +6,7 @@ export default function Massenger({ massengerURL }) {
     <>
         <div className="wha" style={{ position: 'fixed', zIndex: '9999999', top: '88%', right: '30px'    }}>
           <a href={`https://m.me/${massengerURL}`} target='_blank' rel="noreferrer">
-            <img src={messanger} alt='messanger' className='whatsapp'/>
+            <img loading='lazy' src={messanger} alt='messanger' className='whatsapp'/>
           </a>
         </div>
     </>
