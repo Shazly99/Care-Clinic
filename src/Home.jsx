@@ -174,7 +174,10 @@ export default function Home({sec3,slider, sec1, val, sec2, staff, whatsNumber }
 
           <ul className="nav nav-pills justify-content-center mb-5" id="pills-tab" role="tablist">
             <li className="nav-item" role="presentation">
-              <button className="nav-link active" id="pills-beforeafter-tab" data-bs-toggle="pill" data-bs-target="#pills-beforeafter" type="button" role="tab" aria-controls="pills-beforeafter" aria-selected="true">Before & After</button>
+              <button className="nav-link active" id="pills-beforeafter-tab" data-bs-toggle="pill" data-bs-target="#pills-beforeafter" type="button" role="tab" aria-controls="pills-beforeafter" aria-selected="true">
+              {val === '1' ? 'قبل بعد' : val === '2' ? 'Before & After' : val === '3' ? 'Avant après' : val === '4' ? 'До после' : val === '5' ? 'Önce sonra' : 'قبل و بعد'}
+              
+              </button>
             </li>
             <li className="nav-item" role="presentation">
               <button className="nav-link" id="pills-place-tab" data-bs-toggle="pill" data-bs-target="#pills-place" type="button" role="tab" aria-controls="pills-place" aria-selected="false">Your Luxury Place</button>
@@ -370,8 +373,8 @@ export default function Home({sec3,slider, sec1, val, sec2, staff, whatsNumber }
       <section id='rashed2' className='py-5'>
         <div className="container">
           <div className="main-title-section text-center mb-3">
-            <h2 className='rashed-secondColor mb-4 h1'>{val === 'ar' ? 'صانعـي ابتسامتـك' : val === 'us' ? 'Your Smile Creators' : val === 'fr' ? 'Vos créateurs de sourire' : val === 'ru' ? 'Создатели вашей улыбки' : val === 'ur' ? 'Gülüş Yaratıcılarınız' : 'Your Smile Creators'}</h2>
-            <p className='mb-0 text-muted'>{val === 'ar' ? 'تعرف على أطبائنا الخبراء' : val === 'us' ? 'Meet Our Expert Doctors' : val === 'fr' ? 'Rencontrez nos médecins experts' : val === 'ru' ? 'Познакомьтесь с нашими врачами-экспертами' : val === 'ur' ? 'Uzman Doktorlarımızla Tanışın' : 'Meet Our Expert Doctors'}</p>
+            <h2 className='rashed-secondColor mb-4 h1'>{val === '1' ? 'صانعـي ابتسامتـك' : val === '2' ? 'Your Smile Creators' : val === '3' ? 'Vos créateurs de sourire' : val === '4' ? 'Создатели вашей улыбки' : val === '5' ? 'Gülüş Yaratıcılarınız' : 'Your Smile Creators'}</h2>
+            <p className='mb-0 text-muted'>{val === '1' ? 'تعرف على أطبائنا الخبراء' : val === '2' ? 'Meet Our Expert Doctors' : val === '3' ? 'Rencontrez nos médecins experts' : val === '4' ? 'Познакомьтесь с нашими врачами-экспертами' : val === '5' ? 'Uzman Doktorlarımızla Tanışın' : 'Meet Our Expert Doctors'}</p>
           </div>
           {Object.keys(staff).length > 2 ?
             <div className="members">
