@@ -12,6 +12,8 @@ import Member from './Member';
 
 export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber }) {
 
+  const {FileURL} = slider?.find(el => el.sect === "5");
+
   const slider1 = {
     dots: false,
     arrows: true,
@@ -82,7 +84,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
   };
   return (
     <>
-      <header className='py-5' style={{ backgroundImage: `url(${img111}` }} dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
+      <header className='py-5' style={{ backgroundImage: `url(https://cureclinckapi.amlakturks.com/storage/app/sliders/${FileURL}` }} dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
         <div className="container h-100">
           <div className="row gy-4 column__sm-reverse gx-md-5 gx-0 d-flex justify-content-center align-items-center mt-5 pt-5">
             <div className="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-8">
@@ -218,9 +220,10 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                 </div>
                 <div className="col-md-6 col-11">
                   <div className="img-tab">
+                    
                     <Slider {...slider1} className='text-center' dir='ltr'>
-                      {slider?.map((item, i) => (
-                        <img loading='lazy' key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                      {slider.filter(el => el.sect === "1").map((item, i) => (
+                        <img key={i} loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4' />
                       ))}
                     </Slider>
                     {/* <img loading='lazy' src={teeth} className='w-100 rounded-4' alt="patient" /> */}
@@ -290,8 +293,8 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                 <div className="col-md-6 col-11">
                   <div className="img-tab">
                     <Slider {...slider1} className='text-center' dir='ltr'>
-                      {slider?.map((item, i) => (
-                        <img loading='lazy' key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                      {slider.filter(el => el.sect === "2").map((item, i) => (
+                        <img key={i} loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4' />
                       ))}
                     </Slider>
                     {/* <img loading='lazy' src={teeth} className='w-100 rounded-4' alt="patient" /> */}
@@ -361,8 +364,8 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                 <div className="col-md-6 col-11">
                   <div className="img-tab">
                     <Slider {...slider1} className='text-center' dir='ltr'>
-                      {slider?.map((item, i) => (
-                        <img loading='lazy' key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                      {slider.filter(el => el.sect === "3").map((item, i) => (
+                        <img key={i} loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4' />
                       ))}
                     </Slider>
                     {/* <img loading='lazy' src={teeth} className='w-100 rounded-4' alt="patient" /> */}

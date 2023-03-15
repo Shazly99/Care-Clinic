@@ -201,7 +201,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
           <Row>
 
             {brand.map((item, i) => (
-              <Col xl={3} lg={3} md={4} className='col-6'>
+              <Col key={i} xl={3} lg={3} md={4} className='col-6'>
                 <div className="partimg">
                   <img loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/brands/` + item.Image} alt="part" className=" w-100" style={{height: '140px'}} />
                 </div>
