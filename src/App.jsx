@@ -59,6 +59,9 @@ function App() {
             staff={globalData?.staff}
             whatsNumber={globalData?.contactus?.whatsapp}
             sec1={globalData?.section1}
+            sec3={globalData?.section3}
+            slider={globalData?.sliders}
+            
           />
 
           <div id="shazly">
@@ -74,7 +77,7 @@ function App() {
               sec6={globalData?.section6}
               brand={globalData?.brands}
               contactus={globalData?.contactus}
-               
+              
             />
           </div>
         </div>

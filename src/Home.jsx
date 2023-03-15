@@ -10,7 +10,7 @@ import teeth3 from './img/img/gif/3.png';
 import teeth4 from './img/img/gif/4.png';
 import Member from './Member';
 
-export default function Home({ sec1, val, sec2, staff, whatsNumber }) {
+export default function Home({sec3,slider, sec1, val, sec2, staff, whatsNumber }) {
 
   const slider1 = {
     dots: false,
@@ -190,30 +190,30 @@ export default function Home({ sec1, val, sec2, staff, whatsNumber }) {
               <div className="row gy-5 column__sm-reverse gx-md-4 gx-0 gy-4 d-flex justify-content-center align-items-center">
                 <div className="col-md-6 col-11">
                   <div className="caption-tab text-white">
-                    <h2 className='fw-bold mb-2'>Before & After Photos</h2>
-                    <p className='mb-2'>Some images for successful cases for our patients.</p>
-                    <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
+                    <h2 className='fw-bold mb-2'> {sec3?.PTitle}</h2>
+                    <p className='mb-2'>  {sec3?.Pbody}</p>
+                    <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                       <span></span><span></span><span></span><span></span>
                       <div className="dt">
                         <div className="dtc">
                           <p>WhatsApp
-                            <label>Get Immediate Info</label>
+                            <label>{val === '1' ? 'احصل على معلومات فورية' : val === '2' ? 'Get Immediate Info' : val === '3' ? 'Obtenez des informations immédiates' : val === '4' ? 'Получить немедленную информацию' : val === '5' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
                           </p>
                         </div>
                         <div className="dtc">
                           <i className="fab fa-whatsapp"></i>
                         </div>
                       </div>
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div className="col-md-6 col-11">
                   <div className="img-tab">
-                    <Slider {...slider1} className='text-center' dir='ltr'>
-                      {cases.map((item, i) => (
-                        <img key={i} src={item.img} alt={item.alt} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className='rounded-4' />
-                      ))}
-                    </Slider>
+                <Slider {...slider1} className='text-center' dir='ltr'>
+                  {slider?.map((item, i) => (
+                    <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                  ))}
+                </Slider>
                     {/* <img src={teeth} className='w-100 rounded-4' alt="patient" /> */}
                   </div>
                 </div>
@@ -225,22 +225,21 @@ export default function Home({ sec1, val, sec2, staff, whatsNumber }) {
               <div className="row gy-5 column__sm-reverse gx-md-4 gx-0 gy-4 d-flex justify-content-center align-items-center">
                 <div className="col-md-6 col-11">
                   <div className="caption-tab text-white">
-                    <h2 className='fw-bold mb-2'>Innovation, Care, Experience</h2>
-                    <p className='mb-2'>Our clinic is located in one of the most populous and well-known locations in Istanbul in Şişli - Fulya. Highly-educated Turkish qualified doctors and friendly team</p>
-                    <p className='mb-2'>Dentists and staff speak more than 3 different languages Our priority is giving high-quality and efficient dental care.</p>
-                    <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
+                    <h2 className='fw-bold mb-2'>{sec3?.LTitle} </h2>
+                    <p className='mb-2'>{sec3?.LBody}</p>
+                     <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                       <span></span><span></span><span></span><span></span>
                       <div className="dt">
                         <div className="dtc">
                           <p>WhatsApp
-                            <label>Get Immediate Info</label>
+                            <label>{val === '1' ? 'احصل على معلومات فورية' : val === '2' ? 'Get Immediate Info' : val === '3' ? 'Obtenez des informations immédiates' : val === '4' ? 'Получить немедленную информацию' : val === '5' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
                           </p>
                         </div>
                         <div className="dtc">
                           <i className="fab fa-whatsapp"></i>
                         </div>
                       </div>
-                    </button>
+                    </a>
                   </div>
                 </div>
                 {/* <div className="col-md-6 col-11">
@@ -281,11 +280,11 @@ export default function Home({ sec1, val, sec2, staff, whatsNumber }) {
                 </div> */}
                 <div className="col-md-6 col-11">
                   <div className="img-tab">
-                    <Slider {...slider1} className='text-center' dir='ltr'>
-                      {cases.map((item, i) => (
-                        <img key={i} src={item.img} alt={item.alt} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className='rounded-4' />
-                      ))}
-                    </Slider>
+                <Slider {...slider1} className='text-center' dir='ltr'>
+                  {slider?.map((item, i) => (
+                    <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                  ))}
+                </Slider>
                     {/* <img src={teeth} className='w-100 rounded-4' alt="patient" /> */}
                   </div>
                 </div>
@@ -297,21 +296,21 @@ export default function Home({ sec1, val, sec2, staff, whatsNumber }) {
               <div className="row gy-5 column__sm-reverse gx-md-4 gx-0 gy-4 d-flex justify-content-center align-items-center">
                 <div className="col-md-6 col-11">
                   <div className="caption-tab text-white">
-                    <h2 className='fw-bold mb-2'>Our Happy Patients</h2>
-                    <p className='mb-2'>One of our happy patients is explaining her good experience at DentSpa® , enjoy watching and be the next one :)</p>
-                    <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
+                    <h2 className='fw-bold mb-2'>{sec3?.BATitle}</h2>
+                    <p className='mb-2'> {sec3?.BABody}</p>
+                    <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                       <span></span><span></span><span></span><span></span>
                       <div className="dt">
                         <div className="dtc">
                           <p>WhatsApp
-                            <label>Get Immediate Info</label>
+                            <label>{val === '1' ? 'احصل على معلومات فورية' : val === '2' ? 'Get Immediate Info' : val === '3' ? 'Obtenez des informations immédiates' : val === '4' ? 'Получить немедленную информацию' : val === '5' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
                           </p>
                         </div>
                         <div className="dtc">
                           <i className="fab fa-whatsapp"></i>
                         </div>
                       </div>
-                    </button>
+                    </a>
                   </div>
                 </div>
                 {/* <div className="col-md-6 col-11">
@@ -352,11 +351,11 @@ export default function Home({ sec1, val, sec2, staff, whatsNumber }) {
                 </div> */}
                 <div className="col-md-6 col-11">
                   <div className="img-tab">
-                    <Slider {...slider1} className='text-center' dir='ltr'>
-                      {cases.map((item, i) => (
-                        <img key={i} src={item.img} alt={item.alt} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className='rounded-4' />
-                      ))}
-                    </Slider>
+                <Slider {...slider1} className='text-center' dir='ltr'>
+                  {slider?.map((item, i) => (
+                    <img key={i} src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ minHeight: '250px', maxHeight: '300px', cursor: 'pointer' }} className=' rounded-4' />
+                  ))}
+                </Slider>
                     {/* <img src={teeth} className='w-100 rounded-4' alt="patient" /> */}
                   </div>
                 </div>
