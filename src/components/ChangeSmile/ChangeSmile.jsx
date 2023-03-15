@@ -281,7 +281,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
                   <li><a href="mailto:info@dentspa.com.tr" style={{ color: ' #bc2a8d ', background: ' #f8ecf4' }}>
                     <i className="far fa-envelope"></i> </a>
                   </li>
-                  <li><a href={`https://www.google.com/maps/dir//${contactus?.Lat},${contactus?.Longit}`} target='_blank' rel="noreferrer" style={{ color: ' #dc4b3e', background: ' #b2f3fe' }}>
+                  <li><a href={`https://www.google.com/maps/dir//${Number(contactus?.Lat)},${Number(contactus?.Longit)}`} target='_blank' rel="noreferrer" style={{ color: ' #dc4b3e', background: ' #b2f3fe' }}>
                     <i className="fas fa-map-marker-alt"></i> </a>
                   </li>
                 </ul>
