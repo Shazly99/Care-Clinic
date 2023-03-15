@@ -73,6 +73,8 @@ function App() {
               whatsNumber={globalData?.contactus?.whatsapp}
               sec6={globalData?.section6}
               brand={globalData?.brands}
+              contactus={globalData?.contactus}
+               
             />
           </div>
         </div>

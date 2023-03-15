@@ -89,7 +89,8 @@ export default function Home({ sec1, val, sec2, staff, whatsNumber }) {
                 <h4 className='fw-bold mb-3 rashed-secondColor'>Diagnosis And Cost In Minutes</h4>
                 <input type="text" placeholder='Full Name' className='mx-auto form-control rashed-bgInput mb-3' required name="name" id="name" />
                 <PhoneInput
-                  country={val === 'ar' ? 'eg' : val === 'ur' ? 'tr' : val === 'en' ? 'us' : val === 'fr' ? 'fr' : val === 'ru' ? 'ru' : 'ae'}
+                  country={val === '1' ? 'eg' : val === '5' ? 'tr' : val === '2' ? 'us' : val === '3' ? 'fr' : val === '4' ? 'ru' : 'ae'}
+
                   preferredCountries={['eg', 'sa', 'us', 'fr']}
                   enableSearch={true}
                   searchPlaceholder='phone number...'
@@ -122,7 +123,7 @@ export default function Home({ sec1, val, sec2, staff, whatsNumber }) {
                     <div className="dt d-flex justify-content-center align-item-center flex-row">
                       <div className="dtc">
                         <p>WhatsApp
-                        <label>{val === '1' ? 'احصل على معلومات فورية' : val === '2' ? 'Get Immediate Info' : val === '3' ? 'Obtenez des informations immédiates' : val === '4' ? 'Получить немедленную информацию' : val === '5' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
+                          <label>{val === '1' ? 'احصل على معلومات فورية' : val === '2' ? 'Get Immediate Info' : val === '3' ? 'Obtenez des informations immédiates' : val === '4' ? 'Получить немедленную информацию' : val === '5' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
                         </p>
                       </div>
                       <div className="dtc">

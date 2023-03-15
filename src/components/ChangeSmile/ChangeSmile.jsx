@@ -11,7 +11,7 @@ import partner1 from '../../img/img/armaera.png'
 import PhoneInput from 'react-phone-input-2';
 
 
-const ChangeSmile = ({ brand, val, sec5, sec6, whatsNumber }) => {
+const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
 
 
   const slider2 = {
@@ -206,7 +206,7 @@ const ChangeSmile = ({ brand, val, sec5, sec6, whatsNumber }) => {
                   <img src={`https://cureclinckapi.amlakturks.com/storage/app/brands/` + item.Image} alt="part" className=" w-100" />
                 </div>
               </Col>
-            ))} 
+            ))}
 
           </Row>
         </Container>
@@ -242,7 +242,7 @@ const ChangeSmile = ({ brand, val, sec5, sec6, whatsNumber }) => {
           <Row dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
             <Col xl={3} lg={3} md={5} sm={11}>
               <img src={logo} width={175} style={{ height: '120px' }} alt="logo" />
-              <p className='mt-32'>At DentSpa® with the latest technology, and a great team of dentists and specialists, we are able to provide great, quality dental care to our patients.</p>
+              <p className='mt-32'>{contactus?.footerText}</p>
               <div className="iso__footer">
                 <img src={iso1} alt="iso" />
                 <img src={iso2} alt="iso" />
@@ -250,55 +250,65 @@ const ChangeSmile = ({ brand, val, sec5, sec6, whatsNumber }) => {
               </div>
             </Col>
             <Col xl={3} lg={3} md={5} sm={11}>
-              <h4 className=' mb-3 rashed-secondColor'>Contact us</h4>
+              <h4 className=' mb-3 rashed-secondColor'>
+                
+              {val === '1' ? ' اتصل بنا      ' :
+                val === '2' ? ' Contact us  ' :
+                  val === '3' ? 'Contactez-nous' :
+                    val === '4' ? '     Связаться с нами    ' :
+                      val === '5' ? 'Bize Ulaşın  ' : ' اتصل بنا'}
+               </h4>
               <div className="mt-32">
 
-                <p> <strong>Istanbul, Turkey</strong>
+                <p> <strong>{contactus?.Citycountry}</strong>
                   <br />
-
-                  Teşvikiye Mah. Hakkı Yeten Cad.
-                  Terrace Fulya Centre, 1 no: 11 K: M4             <br />
+                  {contactus?.address}
                   <br />
-                  info@dentspa.com</p>
+                  <br />{contactus?.Email}</p>
                 <ul className="list-unstyled list-inline social">
-                  <li><a href="tel://+90 542 258 88 39" target='_blank' rel="noreferrer" style={{ color: '#3b5998', background: '#ecf0f8' }} >
+                  <li><a href={`tel://+${contactus?.Phone}`} target='_blank' rel="noreferrer" style={{ color: '#3b5998', background: '#ecf0f8' }} >
                     <i className="fas fa-phone"  ></i> </a>
                   </li>
                   <li>
-                    <a href="https://wa.me/905422588839?text=Hello%2C+Can+I+book+an+appointment%21" target='_blank' rel="noreferrer" style={{ color: '#25d366 ', background: ' #25d3661f' }}
+                    <a href={`https://wa.me/${contactus?.whatsapp}?text=Hello%2C+Can+I+book+an+appointment%21`} target='_blank' rel="noreferrer" style={{ color: '#25d366 ', background: ' #25d3661f' }}
                     >
                       <i className="fab fa-whatsapp"></i> </a>
 
                   </li>
-                  <li><a href="https://m.me/DentSpaINT" target='_blank' rel="noreferrer" style={{ color: ' #0084ff', background: ' #ecf5f8' }} >
+                  <li><a href={`https://${contactus?.Messenger}/DentSpaINT`} target='_blank' rel="noreferrer" style={{ color: ' #0084ff', background: ' #ecf5f8' }} >
                     <i className="fab fa-facebook-messenger"></i> </a>
                   </li>
                   <li><a href="mailto:info@dentspa.com.tr" style={{ color: ' #bc2a8d ', background: ' #f8ecf4' }}>
                     <i className="far fa-envelope"></i> </a>
                   </li>
-                  <li><a href="https://www.google.com/maps/dir//Teşvikiye+Mahallesi,+DentSpa+Ağız+ve+Diş+Sağlığı+Polikliniği,+Şişli%2FIstanbul/" target='_blank' rel="noreferrer" style={{ color: ' #dc4b3e', background: ' #b2f3fe' }}>
+                  <li><a href={`https://www.google.com/maps/dir//${contactus?.Lat},${contactus?.Longit}`} target='_blank' rel="noreferrer" style={{ color: ' #dc4b3e', background: ' #b2f3fe' }}>
                     <i className="fas fa-map-marker-alt"></i> </a>
                   </li>
                 </ul>
               </div>
             </Col>
             <Col xl={3} lg={3} md={5} sm={11}>
-              <h4 className=' mb-3 rashed-secondColor'>+90 850 255 8888</h4>
+              <h4 className=' mb-3 rashed-secondColor'>{contactus?.Phone}</h4>
               <div className="mt-32">
-                <p><strong>We speak five languages.</strong><br />
-                  if you speak Turkish, English,
-                  Russian, Arabic or French.
-                  Our customer care team would
-                  love to help you.
+                <p><strong> {contactus?.footerHead}</strong><br />
+                  {contactus?.footerBody}
                 </p>
               </div>
             </Col>
             <Col xl={3} lg={4} md={5} sm={9} className='col-11'>
-              <h4 className=' mb-3 rashed-secondColor'>Send Message</h4>
+              <h4 className=' mb-3 rashed-secondColor'>
+
+              {val === '1' ? ' إرسال رساله      ' :
+                val === '2' ? 'Send Message  ' :
+                  val === '3' ? 'Envoyer le message' :
+                    val === '4' ? 'Отправить сообщение' :
+                      val === '5' ? 'Mesaj gönder' : 'شركاؤنا'}
+ 
+              </h4>
               <form className='mt-32 bg-white text-center py-4 px-3 rounded-3' dir='ltr'>
                 <input type="text" placeholder='Full Name' className='mx-auto form-control rashed-bgInput mb-3' required name="name" id="name" />
                 <PhoneInput
-                  country={val === 'ar' ? 'eg' : val === 'ur' ? 'tr' : val === 'en' ? 'us' : val === 'fr' ? 'fr' : val === 'ru' ? 'ru' : 'ae'}
+                  country={val === '1' ? 'eg' : val === '5' ? 'tr' : val === '2' ? 'us' : val === '3' ? 'fr' : val === '4' ? 'ru' : 'ae'}
 
                   // country={val === 'ar' || val ===  'ur' || 'ur'? 'eg' : val === 'en' ? 'us' : val === 'fr' ? 'fr' : 'ae'}
                   preferredCountries={['eg', 'sa', 'us', 'fr']}
@@ -314,7 +324,13 @@ const ChangeSmile = ({ brand, val, sec5, sec6, whatsNumber }) => {
 
                 />
                 <textarea placeholder='Message' className='mx-auto form-control rashed-bgInput my-3' name='message' id='message'></textarea>
-                <button type='submit' className='btn send__footer '>Send Message</button>
+                <button type='submit' className='btn send__footer '>
+                {val === '1' ? ' إرسال رساله      ' :
+                val === '2' ? 'Send Message  ' :
+                  val === '3' ? 'Envoyer le message' :
+                    val === '4' ? 'Отправить сообщение' :
+                      val === '5' ? 'Mesaj gönder' : 'شركاؤنا'}
+                </button>
               </form>
             </Col>
           </Row>
