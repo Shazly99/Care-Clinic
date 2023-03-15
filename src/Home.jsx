@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import img111 from './img/img/slider.png';
+// import img111 from './img/img/slider.png';
 import img1 from './img/img/img1.png';
 // import teeth1 from './img/img/gif/1.png';
 // import teeth2 from './img/img/gif/2.png';
