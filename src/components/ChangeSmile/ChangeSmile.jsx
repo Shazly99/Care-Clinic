@@ -198,7 +198,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
             <label></label>
 
           </div>
-          <Row>
+          <Row className="row gy-4 gx-4 d-flex justify-content-center align-items-center">
 
             {brand.map((item, i) => (
               <Col key={i} xl={3} lg={3} md={4} className='col-6'>
