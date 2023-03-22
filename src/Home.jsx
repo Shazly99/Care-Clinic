@@ -82,6 +82,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
       },
     ]
   };
+
   return (
     <>
       <header className='py-5' style={{ backgroundImage: `url(https://cureclinckapi.amlakturks.com/storage/app/sliders/${FileURL}` }} dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
@@ -112,11 +113,8 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
             </div>
             <div className="col-md-7 col-11">
               <div className="caption text-white">
-                <p> {sec1?.SmallOne}</p>
-                <h1>{sec1?.BigOne}
-                  {/* <strong className='rashed-mainColor'> Luxury Place</strong> */}
-                  <strong className='rashed-secondColor'>{sec1?.ColorOne}</strong>
-                </h1>
+                <p className='mb-0'> {sec1?.SmallOne}</p>
+                <h2>{sec1?.BigOne} <strong className='rashed-secondColor'>{sec1?.ColorOne}</strong> </h2>
                 <p className='mb-1'> {sec1?.SmallFirst} </p>
                 <p className='mb-0'>{sec1?.SmallSec}</p>
                 <div className="visible-xs">
@@ -201,7 +199,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
               <div className="row gy-5 column__sm-reverse gx-md-4 gx-0 gy-4 d-flex justify-content-center align-items-center">
                 <div className="col-md-6 col-11">
                   <div className="caption-tab text-white">
-                    <h2 className='fw-bold mb-2'> {sec3?.PTitle}</h2>
+                    <h2 className='fw-bold mb-2 special-reverce-heading-lg'> {sec3?.PTitle}</h2>
                     <p className='mb-2'>  {sec3?.Pbody}</p>
                     <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                       <span></span><span></span><span></span><span></span>
@@ -219,8 +217,8 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   </div>
                 </div>
                 <div className="col-md-6 col-11">
+                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.PTitle}</h2>
                   <div className="img-tab">
-                    
                     <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider.filter(el => el.sect === "1").map((item, i) => (
                         <img key={i} loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4' />
@@ -237,7 +235,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
               <div className="row gy-5 column__sm-reverse gx-md-4 gx-0 gy-4 d-flex justify-content-center align-items-center">
                 <div className="col-md-6 col-11">
                   <div className="caption-tab text-white">
-                    <h2 className='fw-bold mb-2'>{sec3?.LTitle} </h2>
+                    <h2 className='fw-bold mb-2 special-reverce-heading-lg'>{sec3?.LTitle} </h2>
                     <p className='mb-2'>{sec3?.LBody}</p>
                     <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                       <span></span><span></span><span></span><span></span>
@@ -291,6 +289,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   </div>
                 </div> */}
                 <div className="col-md-6 col-11">
+                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.LTitle}</h2>
                   <div className="img-tab">
                     <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider.filter(el => el.sect === "2").map((item, i) => (
@@ -308,7 +307,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
               <div className="row gy-5 column__sm-reverse gx-md-4 gx-0 gy-4 d-flex justify-content-center align-items-center">
                 <div className="col-md-6 col-11">
                   <div className="caption-tab text-white">
-                    <h2 className='fw-bold mb-2'>{sec3?.BATitle}</h2>
+                    <h2 className='fw-bold mb-2 special-reverce-heading-lg'>{sec3?.BATitle}</h2>
                     <p className='mb-2'> {sec3?.BABody}</p>
                     <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                       <span></span><span></span><span></span><span></span>
@@ -362,6 +361,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   </div>
                 </div> */}
                 <div className="col-md-6 col-11">
+                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.BATitle}</h2>
                   <div className="img-tab">
                     <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider.filter(el => el.sect === "3").map((item, i) => (

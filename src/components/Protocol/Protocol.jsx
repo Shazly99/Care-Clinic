@@ -113,7 +113,7 @@ const Protocol = ({ val, whatsNumber, sec4 ,slider}) => {
               </div>
             </Col>
             <Col lg={6} className='app__protocol-right mx-auto'>
-              <h2 className='special-reverce-heading-sm h1 mb-4' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>Pandemic Distancing Protocol</h2>
+              <h2 className='special-reverce-heading-sm h1 mb-4' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec4?.Title}</h2>
 
               <div className="img-tab">
                 <Slider {...slider1} className='text-center' dir='ltr'>
