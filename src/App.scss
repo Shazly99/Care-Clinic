@@ -366,9 +366,9 @@ header .caption h2 {
 
 
 @media screen and (max-width: 500px) {
-    // header .caption h2 {
-    //     font-size: 2rem !important;
-    // }
+    header .caption h2 {
+        font-size: 1.85rem !important;
+    }
 }
 
 @media screen and (max-width: 380px) {
