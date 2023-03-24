@@ -286,7 +286,6 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
                     <a href={`https://www.google.com/maps/dir//${Number(contactus?.Lat)},${Number(contactus?.Longit)}/@${Number(contactus?.Lat)},${Number(contactus?.Longit)},16z`} target='_blank' rel="noreferrer" style={{ color: ' #dc4b3e', background: ' #b2f3fe' }}>
                       <i className="fas fa-map-marker-alt"></i> 
                     </a>
-                    {/* https://www.google.com/maps/dir//30.0373337,31.3445999/@30.0373337,31.3445999,16z */}
                   </li>
                 </ul>
               </div>
