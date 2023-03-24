@@ -110,7 +110,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
           {whatsNumber !== null && whatsNumber !== undefined ?
             <div className="send text-center mt-5">
               {/* <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer"> */}
-              <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open rounded-2" target='_blank' rel="noreferrer">
+              <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open rounded-2" target='_blank' rel="noreferrer">
                 <span></span><span></span><span></span><span></span>
                 <div className="dt">
                   <div className="dtc">
@@ -221,7 +221,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
             </div>
             <div className="visible-xs">
               {/* <button className="animated-button1 whats fix-whats3 btn w-btn-open"> */}
-              <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} target='_blank' rel="noreferrer" className="animated-button1 whats fix-whats2 btn w-btn-open">
+              <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} target='_blank' rel="noreferrer" className="animated-button1 whats fix-whats2 btn w-btn-open">
                 <span></span><span></span><span></span><span></span>
                 <div className="dt d-flex justify-content-center align-item-center flex-row"><div className="dtc">
                   <p>WhatsApp
@@ -270,20 +270,23 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
                     <i className="fas fa-phone"  ></i> </a>
                   </li>
                   <li>
-                    <a href={`https://wa.me/${contactus?.whatsapp}?text=Hello%2C+Can+I+book+an+appointment%21`} target='_blank' rel="noreferrer" style={{ color: '#25d366 ', background: ' #25d3661f' }}
+                    <a href={`${contactus?.whatsapp}?text=Hello%2C+Can+I+book+an+appointment%21`} target='_blank' rel="noreferrer" style={{ color: '#25d366 ', background: ' #25d3661f' }}
                     >
                       <i className="fab fa-whatsapp"></i> </a>
 
                   </li>
-                  <li><a href={`https://${contactus?.Messenger}/DentSpaINT`} target='_blank' rel="noreferrer" style={{ color: ' #0084ff', background: ' #ecf5f8' }} >
+                  <li><a href={`${contactus?.Messenger}/DentSpaINT`} target='_blank' rel="noreferrer" style={{ color: ' #0084ff', background: ' #ecf5f8' }} >
                     <i className="fab fa-facebook-messenger"></i> </a>
                   </li>
                   <li><a href="mailto:info@dentspa.com.tr" style={{ color: ' #bc2a8d ', background: ' #f8ecf4' }}>
                     <i className="far fa-envelope"></i> </a>
                   </li>
                   
-                  <li><a href={`https://www.google.com/maps/dir//${Number(contactus?.Lat)},${Number(contactus?.Longit)}`} target='_blank' rel="noreferrer" style={{ color: ' #dc4b3e', background: ' #b2f3fe' }}>
-                    <i className="fas fa-map-marker-alt"></i> </a>
+                  <li>
+                    <a href={`https://www.google.com/maps/dir//${Number(contactus?.Lat)},${Number(contactus?.Longit)}/@${Number(contactus?.Lat)},${Number(contactus?.Longit)},16z`} target='_blank' rel="noreferrer" style={{ color: ' #dc4b3e', background: ' #b2f3fe' }}>
+                      <i className="fas fa-map-marker-alt"></i> 
+                    </a>
+                    {/* https://www.google.com/maps/dir//30.0373337,31.3445999/@30.0373337,31.3445999,16z */}
                   </li>
                 </ul>
               </div>

@@ -80,7 +80,7 @@ const Protocol = ({ val, whatsNumber, sec4 ,slider}) => {
               <h2 className='special-reverce-heading-lg mb-3'>{sec4?.Title}</h2>
               <p style={{ fontSize: '14px' }}>{sec4?.body}</p>
               <div className="center caption-tab">
-                {/* <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target="blank">
+                {/* <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target="blank">
                   <span></span><span></span><span></span><span></span>
                   <div className="dt">
                     <div className="dtc">
@@ -95,7 +95,7 @@ const Protocol = ({ val, whatsNumber, sec4 ,slider}) => {
                   </div>
                 </a> */}
 
-                    <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
+                    <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                       <span></span><span></span><span></span><span></span>
                       <div className="dt">
                         <div className="dtc">

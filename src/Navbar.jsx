@@ -17,13 +17,13 @@ export default function Navbar({val , setVal , whatsNumber , massengerURL , phon
                         </a>
                       </li>
                       <li> 
-                        <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} target='_blank' rel="noreferrer" style={{ color: '#25d366 ',background:' #25d3661f' }}
+                        <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} target='_blank' rel="noreferrer" style={{ color: '#25d366 ',background:' #25d3661f' }}
                                 >
                           <i className="fab fa-whatsapp"></i> 
                         </a>
                       </li>
                       <li>
-                        <a href={`https://m.me/${massengerURL}`} target='_blank' rel="noreferrer" style= {{color:' #0084ff',background:' #ecf5f8'}} >
+                        <a href={`${massengerURL}`} target='_blank' rel="noreferrer" style= {{color:' #0084ff',background:' #ecf5f8'}} >
                           <i className="fab fa-facebook-messenger"></i> 
                         </a>
                       </li>

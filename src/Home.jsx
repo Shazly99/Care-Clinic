@@ -119,7 +119,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                 <p className='mb-0'>{sec1?.SmallSec}</p>
                 <div className="visible-xs">
                   {/* <button className="animated-button1 whats fix-whats3 btn w-btn-open"> */}
-                  <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 btn w-btn-open">
+                  <a target='_blank' rel="noreferrer" href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 btn w-btn-open">
                     <span></span><span></span><span></span><span></span>
                     <div className="dt d-flex justify-content-center align-item-center flex-row">
                       <div className="dtc">
@@ -201,7 +201,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   <div className="caption-tab text-white">
                     <h2 className='fw-bold mb-2 special-reverce-heading-lg'> {sec3?.PTitle}</h2>
                     <p className='mb-2'>  {sec3?.Pbody}</p>
-                    <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
+                    <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                       <span></span><span></span><span></span><span></span>
                       <div className="dt">
                         <div className="dtc">
@@ -237,7 +237,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   <div className="caption-tab text-white">
                     <h2 className='fw-bold mb-2 special-reverce-heading-lg'>{sec3?.LTitle} </h2>
                     <p className='mb-2'>{sec3?.LBody}</p>
-                    <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
+                    <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                       <span></span><span></span><span></span><span></span>
                       <div className="dt">
                         <div className="dtc">
@@ -309,7 +309,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   <div className="caption-tab text-white">
                     <h2 className='fw-bold mb-2 special-reverce-heading-lg'>{sec3?.BATitle}</h2>
                     <p className='mb-2'> {sec3?.BABody}</p>
-                    <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
+                    <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
                       <span></span><span></span><span></span><span></span>
                       <div className="dt">
                         <div className="dtc">
@@ -407,7 +407,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
           {whatsNumber !== null && whatsNumber !== undefined ?
             <div className="send text-center mt-5">
               {/* <button className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer"> */}
-              <a href={`https://wa.me/${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats3 w-btn w-btn-open rounded-2" target='_blank' rel="noreferrer">
+              <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats3 w-btn w-btn-open rounded-2" target='_blank' rel="noreferrer">
                 <span></span><span></span><span></span><span></span>
                 <div className="dt">
                   <div className="dtc">
