@@ -342,7 +342,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
       <div className="copy">
         <div className="container">
           <p className="copyp roboto">
-            2023 - <span> Care Clinic  </span> © All Rights Reserved.
+            2023 - <span> Cure Clinic  </span> © All Rights Reserved.
           </p>
         </div>
       </div>
