@@ -198,7 +198,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
 
               <div className="row gy-5 column__sm-reverse gx-md-4 gx-0 gy-4 d-flex justify-content-center align-items-center">
                 <div className="col-md-6 col-11">
-                  <div className="caption-tab text-white">
+                  <div className={`caption-tab text-white text-center ${val === '1' || val === '5' ? 'text-md-end' : 'text-md-start'}`}>
                     <h2 className='fw-bold mb-2 special-reverce-heading-lg'> {sec3?.PTitle}</h2>
                     <p className='mb-2'>  {sec3?.Pbody}</p>
                     <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
@@ -217,7 +217,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   </div>
                 </div>
                 <div className="col-md-6 col-11">
-                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.PTitle}</h2>
+                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white text-center' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.PTitle}</h2>
                   <div className="img-tab">
                     <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider.filter(el => el.sect === "1").map((item, i) => (
@@ -234,7 +234,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
 
               <div className="row gy-5 column__sm-reverse gx-md-4 gx-0 gy-4 d-flex justify-content-center align-items-center">
                 <div className="col-md-6 col-11">
-                  <div className="caption-tab text-white">
+                  <div className={`caption-tab text-white text-center ${val === '1' || val === '5' ? 'text-md-end' : 'text-md-start'}`}>
                     <h2 className='fw-bold mb-2 special-reverce-heading-lg'>{sec3?.LTitle} </h2>
                     <p className='mb-2'>{sec3?.LBody}</p>
                     <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
@@ -289,7 +289,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   </div>
                 </div> */}
                 <div className="col-md-6 col-11">
-                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.LTitle}</h2>
+                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white text-center' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.LTitle}</h2>
                   <div className="img-tab">
                     <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider.filter(el => el.sect === "2").map((item, i) => (
@@ -306,7 +306,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
 
               <div className="row gy-5 column__sm-reverse gx-md-4 gx-0 gy-4 d-flex justify-content-center align-items-center">
                 <div className="col-md-6 col-11">
-                  <div className="caption-tab text-white">
+                  <div className={`caption-tab text-white text-center ${val === '1' || val === '5' ? 'text-md-end' : 'text-md-start'}`}>
                     <h2 className='fw-bold mb-2 special-reverce-heading-lg'>{sec3?.BATitle}</h2>
                     <p className='mb-2'> {sec3?.BABody}</p>
                     <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
@@ -361,7 +361,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   </div>
                 </div> */}
                 <div className="col-md-6 col-11">
-                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.BATitle}</h2>
+                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white text-center' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.BATitle}</h2>
                   <div className="img-tab">
                     <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider.filter(el => el.sect === "3").map((item, i) => (
