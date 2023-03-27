@@ -6,7 +6,7 @@ import virus1 from '../../img/virus-1.png'
 import planet from '../../img/planet-1.png'
 // import { BsPlayFill } from "react-icons/bs";
 // import { BsWhatsapp } from "react-icons/bs";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 // import teeth1 from '../../img/img/gif/1.png';
 // import teeth2 from '../../img/img/gif/2.png';
 // import teeth3 from '../../img/img/gif/3.png';
@@ -33,19 +33,19 @@ const Protocol = ({ val, whatsNumber, sec4 ,slider}) => {
   // }, [play]) 
 
 
-  const slider1 = {
-    dots: false,
-    arrows: true,
-    infinite: true,
-    // centerMode: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 3000,
-    cssEase: "linear",
-  };
+  // const slider1 = {
+  //   dots: false,
+  //   arrows: true,
+  //   infinite: true,
+  //   // centerMode: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   initialSlide: 0,
+  //   autoplay: true,
+  //   speed: 500,
+  //   autoplaySpeed: 3000,
+  //   cssEase: "linear",
+  // };
 
   // const cases =
   //   [
