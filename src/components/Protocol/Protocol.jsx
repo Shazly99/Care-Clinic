@@ -116,11 +116,35 @@ const Protocol = ({ val, whatsNumber, sec4 ,slider}) => {
               <h2 className='special-reverce-heading-sm h2 mb-4 text-center' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec4?.Title}</h2>
 
               <div className="img-tab">
-                <Slider {...slider1} className='text-center' dir='ltr'>
+                {/* <Slider {...slider1} className='text-center' dir='ltr'>
                   {slider.filter(el => el.sect === "4").map((item, i) => (
                     <img key={i} loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4' />
                   ))}
-                </Slider>
+                </Slider> */}
+                  <div id="carouselSec4" className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-inner">
+                      {slider.filter(el => el.sect === "4").map((item, i) => (
+                        <div key={i} className={`carousel-item ${i === 0 ? 'active' : null}`} data-bs-interval="4000">
+                          <img loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4 d-block w-100' />
+                        </div>
+                      ))}
+                    </div>
+                    {slider.filter(el => el.sect === "4").length > 1 ? 
+                      <>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselSec4" data-bs-slide="prev">
+                          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carouselSec4" data-bs-slide="next">
+                          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span className="visually-hidden">Next</span>
+                        </button>
+                      </>
+                      :
+                      ''
+                    }
+
+                  </div>
               </div>
               <img loading='lazy' className='virus-1' src={virus} alt="virus-1" />
               <img loading='lazy' className='virus-2' src={virus1} alt="virus-2" />

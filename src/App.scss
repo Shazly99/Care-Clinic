@@ -1891,3 +1891,16 @@ input {
 .slider-single-high {
     height: 300px !important;
 }
+
+
+.carousel-control-next-icon {
+    background-image: url(./img/chevron-right-solid.png) !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(./img/chevron-left-solid.png) !important;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    opacity: 1 !important;
+}

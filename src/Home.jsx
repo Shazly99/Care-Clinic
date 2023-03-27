@@ -10,24 +10,25 @@ import img1 from './img/img/img1.png';
 // import teeth4 from './img/img/gif/4.png';
 import Member from './Member';
 
+
 export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber }) {
 
   const {FileURL} = slider?.find(el => el.sect === "5");
 
-  const slider1 = {
-    dots: false,
-    arrows: true,
-    infinite: true,
-    // centerMode: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 3000,
-    cssEase: "linear",
+  // const slider1 = {
+  //   dots: false,
+  //   arrows: true,
+  //   infinite: true,
+  //   // centerMode: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   initialSlide: 0,
+  //   autoplay: true,
+  //   speed: 500,
+  //   autoplaySpeed: 3000,
+  //   cssEase: "linear",
 
-  };
+  // };
 
   // const cases =
   //   [
@@ -82,6 +83,35 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
       },
     ]
   };
+
+
+  // const carous = {
+  //   // items: 6,
+  //   responsiveClass: true,
+  //   nav: false,
+  //   dots: true,
+  //   loop: true,
+  //   autoplay: true,
+  //   autoplayTimeout: 3000,
+  //   autoplayHoverPause: true,
+  //   mouseDrag: true,
+  //   touchDrag: true,
+  //   // stagePadding: 50,
+  //   // margin: 30,
+  //   responsive: {
+  //       0: {
+  //           items: 1,
+  //       },
+  //       992: {
+  //           items: 1,
+  //       },
+  //       1250: {
+  //           items: 1,
+  //       }
+  //   },
+  // }
+
+
 
   return (
     <>
@@ -219,12 +249,35 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                 <div className="col-md-6 col-11">
                   <h2 className='special-reverce-heading-sm h1 mb-4 text-white text-center' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.PTitle}</h2>
                   <div className="img-tab">
-                    <Slider {...slider1} className='text-center' dir='ltr'>
+                    {/* <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider.filter(el => el.sect === "1").map((item, i) => (
                         <img key={i} loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4' />
                       ))}
-                    </Slider>
-                    {/* <img loading='lazy' src={teeth} className='w-100 rounded-4' alt="patient" /> */}
+                    </Slider> */}
+                    <div id="carouselSec1" className="carousel slide" data-bs-ride="carousel">
+                      <div className="carousel-inner">
+                        {slider.filter(el => el.sect === "1").map((item, i) => (
+                          <div key={i} className={`carousel-item ${i === 0 ? 'active' : null}`} data-bs-interval="3000">
+                            <img loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4 d-block w-100' />
+                          </div>
+                        ))}
+                      </div>
+                      {slider.filter(el => el.sect === "1").length > 1 ? 
+                        <>
+                          <button className="carousel-control-prev" type="button" data-bs-target="#carouselSec1" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                          </button>
+                          <button className="carousel-control-next" type="button" data-bs-target="#carouselSec1" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                          </button>
+                        </>
+                        :
+                        ''
+                      }
+
+                    </div>
                   </div>
                 </div>
               </div>
@@ -291,12 +344,35 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                 <div className="col-md-6 col-11">
                   <h2 className='special-reverce-heading-sm h1 mb-4 text-white text-center' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.LTitle}</h2>
                   <div className="img-tab">
-                    <Slider {...slider1} className='text-center' dir='ltr'>
+                    {/* <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider.filter(el => el.sect === "2").map((item, i) => (
                         <img key={i} loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4' />
                       ))}
-                    </Slider>
-                    {/* <img loading='lazy' src={teeth} className='w-100 rounded-4' alt="patient" /> */}
+                    </Slider> */}
+                    <div id="carouselSec2" className="carousel slide" data-bs-ride="carousel">
+                      <div className="carousel-inner">
+                        {slider.filter(el => el.sect === "2").map((item, i) => (
+                          <div key={i} className={`carousel-item ${i === 0 ? 'active' : null}`} data-bs-interval="3000">
+                            <img loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4 d-block w-100' />
+                          </div>
+                        ))}
+                      </div>
+                      {slider.filter(el => el.sect === "2").length > 1 ? 
+                        <>
+                          <button className="carousel-control-prev" type="button" data-bs-target="#carouselSec2" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                          </button>
+                          <button className="carousel-control-next" type="button" data-bs-target="#carouselSec2" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                          </button>
+                        </>
+                        :
+                        ''
+                      }
+
+                    </div>
                   </div>
                 </div>
               </div>
@@ -363,12 +439,35 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                 <div className="col-md-6 col-11">
                   <h2 className='special-reverce-heading-sm h1 mb-4 text-white text-center' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.BATitle}</h2>
                   <div className="img-tab">
-                    <Slider {...slider1} className='text-center' dir='ltr'>
+                    {/* <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider.filter(el => el.sect === "3").map((item, i) => (
                         <img key={i} loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4' />
                       ))}
-                    </Slider>
-                    {/* <img loading='lazy' src={teeth} className='w-100 rounded-4' alt="patient" /> */}
+                    </Slider> */}
+                    <div id="carouselSec3" className="carousel slide" data-bs-ride="carousel">
+                      <div className="carousel-inner">
+                        {slider.filter(el => el.sect === "3").map((item, i) => (
+                          <div key={i} className={`carousel-item ${i === 0 ? 'active' : null}`} data-bs-interval="3000">
+                            <img loading='lazy' src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/` + item.FileURL} alt={item.FileURL} style={{ cursor: 'pointer' }} className='slider-single-high rounded-4 d-block w-100' />
+                          </div>
+                        ))}
+                      </div>
+                      {slider.filter(el => el.sect === "3").length > 1 ? 
+                        <>
+                          <button className="carousel-control-prev" type="button" data-bs-target="#carouselSec3" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                          </button>
+                          <button className="carousel-control-next" type="button" data-bs-target="#carouselSec3" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                          </button>
+                        </>
+                        :
+                        ''
+                      }
+
+                    </div>
                   </div>
                 </div>
               </div>
