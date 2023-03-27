@@ -206,7 +206,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
           <ul className="nav nav-pills justify-content-center mb-5" id="pills-tab" role="tablist">
             <li className="nav-item" role="presentation">
               <button className="nav-link active" id="pills-beforeafter-tab" data-bs-toggle="pill" data-bs-target="#pills-beforeafter" type="button" role="tab" aria-controls="pills-beforeafter" aria-selected="true">
-                {val === '1' ? 'قبل بعد' : val === '2' ? 'Before & After' : val === '3' ? 'Avant après' : val === '4' ? 'До после' : val === '5' ? 'Önce sonra' : 'قبل و بعد'}
+                {val === '1' ? 'قبل و بعد' : val === '2' ? 'Before & After' : val === '3' ? 'Avant après' : val === '4' ? 'До после' : val === '5' ? 'Önce sonra' : 'قبل و بعد'}
 
               </button>
             </li>
