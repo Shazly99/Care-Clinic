@@ -115,7 +115,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
 
   return (
     <>
-      <header className='py-5' style={{ backgroundImage: `url(https://cureclinckapi.amlakturks.com/storage/app/sliders/${FileURL}` }} dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
+      <header className='py-5' style={{ backgroundImage: `url(https://cureclinckapi.amlakturks.com/storage/app/sliders/${FileURL}` }} dir={val === '1' ? 'rtl' : 'ltr'}>
         <div className="container h-100">
           <div className="row gy-4 column__sm-reverse gx-md-5 gx-0 d-flex justify-content-center align-items-center mt-5 pt-5">
             <div className="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-8">
@@ -172,7 +172,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
       </header>
 
 
-      <section id='rashed' className='py-5 rashed-mainBg second-sec' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
+      <section id='rashed' className='py-5 rashed-mainBg second-sec' dir={val === '1' ? 'rtl' : 'ltr'}>
         <div className="container">
           {Object.keys(sec2).length > 2 ?
             <div className="special-sec py-2 px-3 rounded-3 bg-white">
@@ -228,7 +228,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
 
               <div className="row gy-5 column__sm-reverse gx-md-4 gx-0 gy-4 d-flex justify-content-center align-items-center">
                 <div className="col-md-6 col-11">
-                  <div className={`caption-tab text-white text-center ${val === '1' || val === '5' ? 'text-md-end' : 'text-md-start'}`}>
+                  <div className={`caption-tab text-white text-center ${val === '1' ? 'text-md-end' : 'text-md-start'}`}>
                     <h2 className='fw-bold mb-2 special-reverce-heading-lg'> {sec3?.PTitle}</h2>
                     <p className='mb-2'>  {sec3?.Pbody}</p>
                     <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
@@ -247,7 +247,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   </div>
                 </div>
                 <div className="col-md-6 col-11">
-                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white text-center' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.PTitle}</h2>
+                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white text-center' dir={val === '1' ? 'rtl' : 'ltr'}>{sec3?.PTitle}</h2>
                   <div className="img-tab">
                     {/* <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider.filter(el => el.sect === "1").map((item, i) => (
@@ -287,7 +287,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
 
               <div className="row gy-5 column__sm-reverse gx-md-4 gx-0 gy-4 d-flex justify-content-center align-items-center">
                 <div className="col-md-6 col-11">
-                  <div className={`caption-tab text-white text-center ${val === '1' || val === '5' ? 'text-md-end' : 'text-md-start'}`}>
+                  <div className={`caption-tab text-white text-center ${val === '1' ? 'text-md-end' : 'text-md-start'}`}>
                     <h2 className='fw-bold mb-2 special-reverce-heading-lg'>{sec3?.LTitle} </h2>
                     <p className='mb-2'>{sec3?.LBody}</p>
                     <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
@@ -342,7 +342,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   </div>
                 </div> */}
                 <div className="col-md-6 col-11">
-                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white text-center' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.LTitle}</h2>
+                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white text-center' dir={val === '1' ? 'rtl' : 'ltr'}>{sec3?.LTitle}</h2>
                   <div className="img-tab">
                     {/* <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider.filter(el => el.sect === "2").map((item, i) => (
@@ -382,7 +382,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
 
               <div className="row gy-5 column__sm-reverse gx-md-4 gx-0 gy-4 d-flex justify-content-center align-items-center">
                 <div className="col-md-6 col-11">
-                  <div className={`caption-tab text-white text-center ${val === '1' || val === '5' ? 'text-md-end' : 'text-md-start'}`}>
+                  <div className={`caption-tab text-white text-center ${val === '1' ? 'text-md-end' : 'text-md-start'}`}>
                     <h2 className='fw-bold mb-2 special-reverce-heading-lg'>{sec3?.BATitle}</h2>
                     <p className='mb-2'> {sec3?.BABody}</p>
                     <a href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 w-btn w-btn-open" target='_blank' rel="noreferrer">
@@ -437,7 +437,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
                   </div>
                 </div> */}
                 <div className="col-md-6 col-11">
-                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white text-center' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>{sec3?.BATitle}</h2>
+                  <h2 className='special-reverce-heading-sm h1 mb-4 text-white text-center' dir={val === '1' ? 'rtl' : 'ltr'}>{sec3?.BATitle}</h2>
                   <div className="img-tab">
                     {/* <Slider {...slider1} className='text-center' dir='ltr'>
                       {slider.filter(el => el.sect === "3").map((item, i) => (
@@ -478,7 +478,7 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
       </section>
 
 
-      <section id='rashed2' className='py-5' dir={val === '1' || val ===  '5' ? 'rtl' : 'ltr'}>
+      <section id='rashed2' className='py-5' dir={val === '1' ? 'rtl' : 'ltr'}>
         <div className="container">
           <div className="main-title-section text-center mb-3">
             <h2 className='rashed-secondColor mb-4 h1'>{val === '1' ? 'صانعـي ابتسامتـك' : val === '2' ? 'Your Smile Creators' : val === '3' ? 'Vos créateurs de sourire' : val === '4' ? 'Создатели вашей улыбки' : val === '5' ? 'Gülüş Yaratıcılarınız' : 'Your Smile Creators'}</h2>

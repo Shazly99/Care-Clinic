@@ -83,12 +83,12 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
   return (
 
     <>
-      <div className="app__ChangeSmile" dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
+      <div className="app__ChangeSmile" dir={val === '1' ? 'rtl' : 'ltr'}>
         <Container >
           <div className="main-title-section text-center">
             <h2 className='rashed-secondColor'>{val === '1' ? 'نغير ابتسامتك ، أنت تغير حياتك' : val === 'us' ? 'We Change Your Smile, You Change Your Life' : val === 'fr' ? 'Nous changeons votre sourire, vous changez votre vie' : val === 'ru' ? 'Мы меняем твою улыбку, ты меняешь свою жизнь' : val === 'ur' ? 'Gülüşünü Değiştiriyoruz, Sen Hayatını Değiştiriyorsun' : 'We Change Your Smile, You Change Your Life'}</h2>
           </div>
-          <Row className='app__ChangeSmile-img mt-5 gy-4 d-flex justify-content-center align-items-center' dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
+          <Row className='app__ChangeSmile-img mt-5 gy-4 d-flex justify-content-center align-items-center' dir={val === '1' ? 'rtl' : 'ltr'}>
             {Object.keys(sec5).length > 2 ?
               <Slider {...slider2}>
                 {sec5.map((item, i) => (
@@ -130,7 +130,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
         </Container>
       </div>
 
-      <div className="nums py-5" dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
+      <div className="nums py-5" dir={val === '1' ? 'rtl' : 'ltr'}>
         <Container>
 
           {Object.keys(sec6).length > 3 ?
@@ -184,7 +184,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
         </Container>
       </div>
 
-      <div className="app__Partners " dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
+      <div className="app__Partners " dir={val === '1' ? 'rtl' : 'ltr'}>
         <Container>
           <div className="main-title-section text-center mb-4">
             <h2 className='rashed-secondColor h1'>
@@ -211,7 +211,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
           </Row>
         </Container>
       </div>
-      <div className="app__typing py-2" dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
+      <div className="app__typing py-2" dir={val === '1' ? 'rtl' : 'ltr'}>
         <Container>
           <div className='grid'>
             <div className="content">
@@ -239,7 +239,7 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
 
       <div className="app__footer">
         <Container>
-          <Row dir={val === '1' || val === '5' ? 'rtl' : 'ltr'}>
+          <Row dir={val === '1' ? 'rtl' : 'ltr'}>
             <Col xl={3} lg={3} md={5} sm={11}>
               <img loading='lazy' src={logo} width={175} style={{ height: '120px' }} alt="logo" />
               <p className='mt-32'>{contactus?.footerText}</p>
@@ -313,7 +313,6 @@ const ChangeSmile = ({ contactus, brand, val, sec5, sec6, whatsNumber }) => {
                 <PhoneInput
                   country={val === '1' ? 'eg' : val === '5' ? 'tr' : val === '2' ? 'us' : val === '3' ? 'fr' : val === '4' ? 'ru' : 'ae'}
 
-                  // country={val === 'ar' || val ===  'ur' || 'ur'? 'eg' : val === 'en' ? 'us' : val === 'fr' ? 'fr' : 'ae'}
                   preferredCountries={['eg', 'sa', 'us', 'fr']}
                   enableSearch={true}
                   searchPlaceholder='phone number...'
