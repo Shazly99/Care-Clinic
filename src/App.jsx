@@ -14,11 +14,10 @@ function App() {
   const [loading, setLoading] = useState(false);
 
 
-  const getData = async () => {
-    setLoading(false);
-    await axios
-      .post(`https://cureclinckapi.amlakturks.com/public/api/GetHomepage`, {
-        Lang: val 
+  const getData = async (el) => {
+      setLoading(false);
+      await axios.post(`https://cureclinckapi.amlakturks.com/public/api/GetHomepage`, {
+          Lang: el 
       })
       .then((res) => {
         setGlobalData(res.data.data);
@@ -30,11 +29,15 @@ function App() {
   };
 
   useEffect(() => {
+    let timeOut = setTimeout(() => {
+      getData(val); 
+    }, 200);
 
-
- 
-      getData(); 
+    return(() => {
+      clearTimeout(timeOut);
+    })
   }, [val]);
+
 
   return (
     <>
