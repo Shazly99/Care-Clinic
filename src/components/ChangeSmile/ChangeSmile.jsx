@@ -3,7 +3,8 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Slider from "react-slick";
 import MemberSmail from './MemberSmail';
 import icons1 from '../../img/img/icons/1.png'
-import logo from '../../img/logo.png'
+// import logo from '../../img/logo.png'
+import logo from '../../img/cure clinic logo.png';
 import iso1 from '../../img/iso-1.png'
 import iso2 from '../../img/iso-4.png'
 import iso3 from '../../img/iso-3.png'

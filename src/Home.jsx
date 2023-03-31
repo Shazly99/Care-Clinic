@@ -115,56 +115,58 @@ export default function Home({ sec3, slider, sec1, val, sec2, staff, whatsNumber
 
   return (
     <>
-      <header className='py-5' style={{ backgroundImage: `url(https://cureclinckapi.amlakturks.com/storage/app/sliders/${FileURL}` }} dir={val === '1' ? 'rtl' : 'ltr'}>
-        <div className="container h-100">
-          <div className="row gy-4 column__sm-reverse gx-md-5 gx-0 d-flex justify-content-center align-items-center mt-5 pt-5">
-            <div className="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-8">
-              <form className='form bg-white text-center py-4 px-3 rounded-3' dir='ltr'>
-                <h4 className='fw-bold mb-3 rashed-secondColor'>Diagnosis And Cost In Minutes</h4>
-                <input type="text" placeholder='Full Name' className='mx-auto form-control rashed-bgInput mb-3' required name="name" id="name" />
-                <PhoneInput
-                  country={val === '1' ? 'eg' : val === '5' ? 'tr' : val === '2' ? 'us' : val === '3' ? 'fr' : val === '4' ? 'ru' : 'ae'}
+      <header className='py-5 position-relative' style={{ backgroundImage: `url(https://cureclinckapi.amlakturks.com/storage/app/sliders/${FileURL}` }} dir={val === '1' ? 'rtl' : 'ltr'}>
+        <div className="position-absolute top-0 bottom-0 start-0 end-0 bg-layer">
+          <div className="container h-100">
+            <div className="row gy-4 column__sm-reverse gx-md-5 gx-0 d-flex justify-content-center align-items-center mt-5 pt-5">
+              <div className="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-8">
+                <form className='form bg-white text-center py-4 px-3 rounded-3' dir='ltr'>
+                  <h4 className='fw-bold mb-3 rashed-secondColor'>Diagnosis And Cost In Minutes</h4>
+                  <input type="text" placeholder='Full Name' className='mx-auto form-control rashed-bgInput mb-3' required name="name" id="name" />
+                  <PhoneInput
+                    country={val === '1' ? 'eg' : val === '5' ? 'tr' : val === '2' ? 'us' : val === '3' ? 'fr' : val === '4' ? 'ru' : 'ae'}
 
-                  preferredCountries={['eg', 'sa', 'us', 'fr']}
-                  enableSearch={true}
-                  searchPlaceholder='phone number...'
-                  inputclassName={`w-100 mx-auto form-control`}
-                  inputProps={{
-                    name: 'phone',
-                    required: true,
-                    id: 'phone',
-                    // autoFocus: true
-                  }}
-                  inputStyle={{ width: '100%' }}
-                />
-                <textarea placeholder='Message' className='mx-auto form-control rashed-bgInput my-3' name='message' id='message'></textarea>
-                <button type='submit' className='btn rashed-mainBtn'>Send Message</button>
-              </form>
-            </div>
-            <div className="col-md-7 col-11">
-              <div className="caption text-white">
-                <p className='mb-0'> {sec1?.SmallOne}</p>
-                <h2>{sec1?.BigOne} <strong className='rashed-secondColor'>{sec1?.ColorOne}</strong> </h2>
-                <p className='mb-1'> {sec1?.SmallFirst} </p>
-                <p className='mb-0'>{sec1?.SmallSec}</p>
-                <div className="visible-xs">
-                  {/* <button className="animated-button1 whats fix-whats3 btn w-btn-open"> */}
-                  <a target='_blank' rel="noreferrer" href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 btn w-btn-open">
-                    <span></span><span></span><span></span><span></span>
-                    <div className="dt d-flex justify-content-center align-item-center flex-row">
-                      <div className="dtc">
-                        <p>WhatsApp
-                          <label>{val === '1' ? 'احصل على معلومات فورية' : val === '2' ? 'Get Immediate Info' : val === '3' ? 'Obtenez des informations immédiates' : val === '4' ? 'Получить немедленную информацию' : val === '5' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
-                        </p>
+                    preferredCountries={['eg', 'sa', 'us', 'fr']}
+                    enableSearch={true}
+                    searchPlaceholder='phone number...'
+                    inputclassName={`w-100 mx-auto form-control`}
+                    inputProps={{
+                      name: 'phone',
+                      required: true,
+                      id: 'phone',
+                      // autoFocus: true
+                    }}
+                    inputStyle={{ width: '100%' }}
+                  />
+                  <textarea placeholder='Message' className='mx-auto form-control rashed-bgInput my-3' name='message' id='message'></textarea>
+                  <button type='submit' className='btn rashed-mainBtn'>Send Message</button>
+                </form>
+              </div>
+              <div className="col-md-7 col-11">
+                <div className="caption text-white">
+                  <p className='mb-0'> {sec1?.SmallOne}</p>
+                  <h2>{sec1?.BigOne} <strong className='rashed-secondColor'>{sec1?.ColorOne}</strong> </h2>
+                  <p className='mb-1'> {sec1?.SmallFirst} </p>
+                  <p className='mb-0'>{sec1?.SmallSec}</p>
+                  <div className="visible-xs">
+                    {/* <button className="animated-button1 whats fix-whats3 btn w-btn-open"> */}
+                    <a target='_blank' rel="noreferrer" href={`${whatsNumber}?text=Hello%2C+Can+I+book+an+appointment%21`} className="animated-button1 whats fix-whats2 btn w-btn-open">
+                      <span></span><span></span><span></span><span></span>
+                      <div className="dt d-flex justify-content-center align-item-center flex-row">
+                        <div className="dtc">
+                          <p>WhatsApp
+                            <label>{val === '1' ? 'احصل على معلومات فورية' : val === '2' ? 'Get Immediate Info' : val === '3' ? 'Obtenez des informations immédiates' : val === '4' ? 'Получить немедленную информацию' : val === '5' ? 'Hemen Bilgi Alınz' : 'Get Immediate Info'}</label>
+                          </p>
+                        </div>
+                        <div className="dtc">
+                          <i className="fab fa-whatsapp"></i>
+                        </div>
                       </div>
-                      <div className="dtc">
-                        <i className="fab fa-whatsapp"></i>
-                      </div>
-                    </div>
-                  </a>
+                    </a>
+                  </div>
+                  {/* <button className='btn rashed-mainBtn rashed-mainColor mt-3 py-2 px-4'>Send Message</button> */}
+
                 </div>
-                {/* <button className='btn rashed-mainBtn rashed-mainColor mt-3 py-2 px-4'>Send Message</button> */}
-
               </div>
             </div>
           </div>

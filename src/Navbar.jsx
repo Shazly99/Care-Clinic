@@ -1,5 +1,7 @@
 import React from 'react';
-import logo from './img/logo.png';
+// import logo from './img/logo.png';
+import logo from './img/cure clinic logo.png';
+// import logo from './img/للل.png';
 
 
 export default function Navbar({val , setVal , whatsNumber , massengerURL , phone , email}) {
